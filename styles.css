@@ -301,3 +301,6 @@ section{padding:96px 0}
   .tl-year,.tl-item:nth-child(even) .tl-year{text-align:left;order:0;font-size:3.2rem}
   .tl-item:nth-child(even) .tl-card{order:0}
 }
+
+.tl-item--todo .tl-card{border-style:dashed;background:transparent}
+.tl-item--todo .tl-year{color:rgba(246,184,0,.45)}
