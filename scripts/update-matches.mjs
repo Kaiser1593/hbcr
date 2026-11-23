@@ -1,7 +1,7 @@
 // Met à jour data/matches.json depuis les pages publiques « poule » de ffhandball.fr.
 // Usage : node scripts/update-matches.mjs
 // Les poules à suivre sont listées dans scripts/sources.json.
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
 const root = new URL('../', import.meta.url);
@@ -46,6 +46,22 @@ const pretty = name => {
 const toScore = r => (r.equipe1Score == null || r.equipe2Score == null || r.equipe1Score === '' || r.equipe2Score === '')
   ? null : [Number(r.equipe1Score), Number(r.equipe2Score)];
 
+const LOGO_BASE = 'https://media-logos-clubs.ffhandball.fr/128/';
+await mkdir(new URL('assets/clubs/', root), { recursive: true });
+// Télécharge le logo une seule fois dans assets/clubs/ et renvoie son chemin relatif.
+async function logo(file, show) {
+  if (!file || show === '0') return null;
+  const name = file.replace(/\.[a-z]+$/i, '') + '.webp';
+  const dest = new URL('assets/clubs/' + name, root);
+  try { await access(dest); } catch {
+    await sleep(500);
+    const res = await fetch(LOGO_BASE + name, { headers: { 'User-Agent': UA } });
+    if (!res.ok) return null;
+    await writeFile(dest, Buffer.from(await res.arrayBuffer()));
+  }
+  return 'assets/clubs/' + name;
+}
+
 const found = new Map();
 for (const src of sources) {
   const base = src.url.replace(/\/?$/, '/');
@@ -68,6 +84,8 @@ for (const src of sources) {
         competition: src.competition,
         home: pretty(r.equipe1Libelle),
         away: pretty(r.equipe2Libelle),
+        homeLogo: await logo(r.structure1Logo, r.equipe1ShowLogo),
+        awayLogo: await logo(r.structure2Logo, r.equipe2ShowLogo),
         score: toScore(r)
       });
     }

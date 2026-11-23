@@ -43,9 +43,10 @@ const fmtLong = d => {
   return s.charAt(0).toUpperCase() + s.slice(1) + ' · ' + fmtTime(d);
 };
 
-function teamBlock(el, name) {
+function teamBlock(el, name, logoUrl) {
   const logo = isUs(name)
     ? '<img src="assets/logo.png" alt="' + esc(name) + '">'
+    : logoUrl ? '<img class="team__club" src="' + esc(logoUrl) + '" alt="' + esc(name) + '" loading="lazy">'
     : '<div class="team__crest">' + esc(name.split(/\s+/).map(w => w[0]).join('').slice(0, 3).toUpperCase()) + '</div>';
   el.innerHTML = logo + '<strong>' + esc(isUs(name) ? 'HBC Romainville' : name) + '</strong>';
 }
@@ -59,8 +60,11 @@ function renderMatches(data) {
   const all = data.matches.map(m => ({ ...m, d: new Date(m.date) })).sort((a, b) => a.d - b.d);
   const played = all.filter(m => m.score).reverse().slice(0, 4);
   const upcoming = all.filter(m => !m.score && m.d.getTime() + 2 * 36e5 > Date.now());
+  const mini = (name, url) => isUs(name)
+    ? '<img class="mini-logo" src="assets/logo.png" alt="">'
+    : url ? '<img class="mini-logo" src="' + esc(url) + '" alt="" loading="lazy">' : '';
   const li = (m, right, cls) => '<li><span class="date">' + esc(fmtShort(m.d)) + '</span><span class="vsname">' +
-    esc(m.home) + ' <em>vs</em> ' + esc(m.away) + '</span><span class="score ' + cls + '">' + right + '</span></li>';
+    mini(m.home, m.homeLogo) + esc(m.home) + ' <em>vs</em> ' + mini(m.away, m.awayLogo) + esc(m.away) + '</span><span class="score ' + cls + '">' + right + '</span></li>';
 
   document.getElementById('resultsList').innerHTML = played.length
     ? played.map(m => li(m, m.score[0] + ' – ' + m.score[1], resultClass(m))).join('')
@@ -75,8 +79,8 @@ function renderMatches(data) {
   if (next) {
     document.getElementById('nm-comp').textContent = next.competition || '';
     document.getElementById('nm-date').textContent = fmtLong(next.d);
-    teamBlock(document.getElementById('nm-home'), next.home);
-    teamBlock(document.getElementById('nm-away'), next.away);
+    teamBlock(document.getElementById('nm-home'), next.home, next.homeLogo);
+    teamBlock(document.getElementById('nm-away'), next.away, next.awayLogo);
     document.getElementById('nm-venue').textContent = '📍 ' + (next.venue || (isUs(next.home) ? 'Gymnase de Romainville' : 'À l\'extérieur'));
     target = next.d.getTime();
     tick();
