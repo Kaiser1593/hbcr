@@ -119,6 +119,15 @@ async function loadStandings() {
         '</td><td class="pts">' + t.points + '</td><td>' + t.played + '</td><td class="opt">' + t.won + '</td><td class="opt">' + t.drawn +
         '</td><td class="opt">' + t.lost + '</td><td class="opt">' + (t.diff > 0 ? '+' : '') + t.diff + '</td><td class="opt form">' + t.form.map(dot).join('') + '</td></tr>';
     }).join('');
+    // Au premier affichage : si Romainville est sous les lignes visibles, on y fait défiler le tableau
+    if (!loadStandings.done) {
+      loadStandings.done = true;
+      const box = body.closest('.standings__scroll'), row = body.querySelector('tr.us');
+      if (box && row) {
+        const b = box.getBoundingClientRect(), r = row.getBoundingClientRect();
+        if (r.bottom > b.bottom) box.scrollTop += r.top - b.top - row.offsetHeight * 2;
+      }
+    }
   } catch (err) {
     console.warn('Classement : impossible de charger', err);
     body.innerHTML = '<tr><td colspan="9" class="left">Classement indisponible pour le moment.</td></tr>';
