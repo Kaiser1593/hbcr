@@ -337,3 +337,17 @@ section{padding:96px 0}
 }
 
 .standings__table .form{white-space:nowrap}
+
+/* Classement compact : 5 lignes visibles, défilement pour la suite */
+.standings{padding:22px;margin-top:44px}
+.standings__head h3{font-size:2rem}
+.standings__scroll{max-height:300px;overflow-y:auto;overscroll-behavior:contain;border-radius:10px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.standings__table thead th{position:sticky;top:0;background:var(--navy);z-index:1}
+.standings__table td{padding:7px 10px}
+.standings .mini-logo{height:22px;width:22px}
+.standings__scroll::-webkit-scrollbar{width:6px}
+.standings__scroll::-webkit-scrollbar-thumb{background:var(--gold);border-radius:6px}
+.standings__hint{text-align:center;color:var(--muted);font-size:.78rem;margin-top:10px}
+@media (max-width:900px){
+  .standings__table th.opt:last-child,.standings__table td.form{display:none}
+}
