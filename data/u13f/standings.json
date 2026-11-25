@@ -1,0 +1,78 @@
+{
+  "competition": "U13 filles · Phase 2",
+  "updated": "2026-11-25T23:22:57.628Z",
+  "table": [
+    {
+      "rank": 1,
+      "team": "Villepinte Handball Club",
+      "logo": "assets/clubs/2026-07-16-daf470ab-c150-4c21-8135-e03ed9096337.webp",
+      "points": 9,
+      "played": 3,
+      "won": 3,
+      "drawn": 0,
+      "lost": 0,
+      "for": 67,
+      "against": 27,
+      "diff": 40,
+      "form": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "rank": 2,
+      "team": "Handball Club de Gagny 1B",
+      "logo": "assets/clubs/2025-09-26-ecb753ef-ac66-459a-849b-b5caaa00e5d8.webp",
+      "points": 7,
+      "played": 3,
+      "won": 2,
+      "drawn": 0,
+      "lost": 1,
+      "for": 44,
+      "against": 23,
+      "diff": 21,
+      "form": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "rank": 3,
+      "team": "Section Rainceenne de Handball",
+      "logo": "assets/clubs/2021-02-09-e9c65205-48d9-4ee4-b542-292d90019f66.webp",
+      "points": 5,
+      "played": 3,
+      "won": 1,
+      "drawn": 0,
+      "lost": 2,
+      "for": 57,
+      "against": 52,
+      "diff": 5,
+      "form": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "rank": 4,
+      "team": "Romainville",
+      "logo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "points": 2,
+      "played": 3,
+      "won": 0,
+      "drawn": 0,
+      "lost": 3,
+      "for": 13,
+      "against": 79,
+      "diff": -66,
+      "form": [
+        -1,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

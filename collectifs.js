@@ -12,14 +12,28 @@ nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 const header = document.getElementById('header');
 addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 10), { passive: true });
 
-// Chip actif selon la section visible
+// Un seul collectif affiché à la fois : les pastilles servent d'onglets
 const chips = [...document.querySelectorAll('.chip')];
-const secObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) chips.forEach(c => c.classList.toggle('active', c.getAttribute('href') === '#' + e.target.id));
+const panels = [...document.querySelectorAll('.collectif')];
+const ids = panels.map(p => p.id);
+function showCollectif(id, updateUrl = true) {
+  if (!ids.includes(id)) id = ids[0];
+  panels.forEach(p => { p.hidden = p.id !== id; });
+  chips.forEach(c => {
+    const on = c.getAttribute('href') === '#' + id;
+    c.classList.toggle('active', on);
+    c.setAttribute('aria-current', on ? 'true' : 'false');
   });
-}, { rootMargin: '-35% 0px -55% 0px' });
-document.querySelectorAll('.collectif').forEach(s => secObs.observe(s));
+  if (updateUrl) history.replaceState(null, '', '#' + id);
+  return id;
+}
+chips.forEach(c => c.addEventListener('click', e => {
+  e.preventDefault();
+  showCollectif(c.getAttribute('href').slice(1));
+}));
+addEventListener('hashchange', () => showCollectif(location.hash.slice(1), false));
+const first = showCollectif(location.hash.slice(1), false);
+if (location.hash) document.getElementById(first).scrollIntoView(); // arrivée depuis un lien « #sf1 »
 
 // Matchs et résultats de SM1 (data/matches.json)
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -42,9 +56,3 @@ const row = (m, right, cls) => '<li><span class="date">' + esc(fmtShort(m.d)) + 
     box.querySelector('[data-role=next]').innerHTML = next.map(m => row(m, fmtTime(m.d), 'next')).join('') || '<li>Calendrier à venir.</li>';
   } catch (e) { console.warn('Matchs SM1 indisponibles', e); }
 })();
-
-// Apparition au scroll
-const els = document.querySelectorAll('.collectif');
-els.forEach(el => el.classList.add('reveal'));
-const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }), { threshold: .1 });
-els.forEach(el => obs.observe(el));

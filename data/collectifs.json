@@ -1,12 +1,81 @@
 [
-  { "id": "sm1", "code": "SM1", "name": "Seniors masculins", "sub": "Équipe 1", "group": "Seniors", "championnat": "+16M 1ère Division Territoriale", "feed": true },
-  { "id": "sf1", "code": "SF1", "name": "Seniors féminines", "sub": "Équipe 1", "group": "Seniors" },
-  { "id": "u18g", "code": "U18G", "name": "U18 garçons", "sub": "-18 ans", "group": "Jeunes" },
-  { "id": "u18f", "code": "U18F", "name": "U18 filles", "sub": "-18 ans", "group": "Jeunes" },
-  { "id": "u15g", "code": "U15G", "name": "U15 garçons", "sub": "-15 ans", "group": "Jeunes" },
-  { "id": "u15f", "code": "U15F", "name": "U15 filles", "sub": "-15 ans", "group": "Jeunes" },
-  { "id": "u13g", "code": "U13G", "name": "U13 garçons", "sub": "-13 ans", "group": "Jeunes" },
-  { "id": "u13f", "code": "U13F", "name": "U13 filles", "sub": "-13 ans", "group": "Jeunes" },
-  { "id": "u11m", "code": "U11", "name": "U11 mixte", "sub": "-11 ans", "group": "Jeunes" },
-  { "id": "ecole", "code": "EDH", "name": "École de hand", "sub": "Découverte", "group": "Jeunes" }
+  {
+    "id": "sm1",
+    "code": "SM1",
+    "name": "Seniors masculins",
+    "sub": "Équipe 1",
+    "group": "Seniors",
+    "championnat": "+16M 1ère Division Territoriale",
+    "feed": true
+  },
+  {
+    "id": "sf1",
+    "code": "SF1",
+    "name": "Seniors féminines",
+    "sub": "Équipe 1",
+    "group": "Seniors"
+  },
+  {
+    "id": "veterans",
+    "code": "VET",
+    "name": "Vétérans",
+    "sub": "Équipe vétérans",
+    "group": "Seniors"
+  },
+  {
+    "id": "u18g",
+    "code": "U18G",
+    "name": "U18 garçons",
+    "sub": "-18 ans",
+    "group": "Jeunes"
+  },
+  {
+    "id": "u18f",
+    "code": "U18F",
+    "name": "U18 filles",
+    "sub": "-18 ans",
+    "group": "Jeunes"
+  },
+  {
+    "id": "u15g",
+    "code": "U15G",
+    "name": "U15 garçons",
+    "sub": "-15 ans",
+    "group": "Jeunes"
+  },
+  {
+    "id": "u15f",
+    "code": "U15F",
+    "name": "U15 filles",
+    "sub": "-15 ans",
+    "group": "Jeunes"
+  },
+  {
+    "id": "u13g",
+    "code": "U13G",
+    "name": "U13 garçons",
+    "sub": "-13 ans",
+    "group": "Jeunes"
+  },
+  {
+    "id": "u13f",
+    "code": "U13F",
+    "name": "U13 filles",
+    "sub": "-13 ans",
+    "group": "Jeunes"
+  },
+  {
+    "id": "u11m",
+    "code": "U11",
+    "name": "U11 mixte",
+    "sub": "-11 ans",
+    "group": "Jeunes"
+  },
+  {
+    "id": "ecole",
+    "code": "EDH",
+    "name": "École de hand",
+    "sub": "Découverte",
+    "group": "Jeunes"
+  }
 ]

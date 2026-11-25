@@ -89,7 +89,7 @@ function renderMatches(data) {
     where.classList.toggle('is-away', !home);
     const route = document.getElementById('nm-route');
     if (home) {
-      route.href = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent('Gymnase Jean Guimier, 15 rue Pasteur, 93230 Romainville');
+      route.href = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent('15 rue Pasteur, 93230 Romainville, France');
       route.hidden = false;
     } else route.hidden = true;
     target = next.d.getTime();

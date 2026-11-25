@@ -1,0 +1,92 @@
+{
+  "club": "Romainville",
+  "updated": "2026-11-25T23:22:56.587Z",
+  "source": "ffhandball.fr",
+  "matches": [
+    {
+      "id": "2715411",
+      "date": "2026-09-27T10:00:00",
+      "journee": 1,
+      "competition": "U13 filles · Phase 1",
+      "home": "Association Sportive de Bondy",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2026-10-22-02b8929f-f694-4e62-b397-f0628feb70ec.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        34,
+        3
+      ]
+    },
+    {
+      "id": "2715414",
+      "date": "2026-10-03T14:50:00",
+      "journee": 2,
+      "competition": "U13 filles · Phase 1",
+      "home": "Section Rainceenne de Handball",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2021-02-09-e9c65205-48d9-4ee4-b542-292d90019f66.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        28,
+        8
+      ]
+    },
+    {
+      "id": "2715416",
+      "date": "2026-10-10T14:00:00",
+      "journee": 3,
+      "competition": "U13 filles · Phase 1",
+      "home": "Romainville",
+      "away": "Aulnay Handball",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2025-09-03-aeb9cabb-95a0-457e-92f4-92c63c5f4fab.webp",
+      "score": [
+        2,
+        32
+      ]
+    },
+    {
+      "id": "2751230",
+      "date": "2026-11-07T13:30:00",
+      "journee": 1,
+      "competition": "U13 filles · Phase 2",
+      "home": "Section Rainceenne de Handball",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2021-02-09-e9c65205-48d9-4ee4-b542-292d90019f66.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        40,
+        7
+      ]
+    },
+    {
+      "id": "2751232",
+      "date": "2026-11-14T14:15:00",
+      "journee": 2,
+      "competition": "U13 filles · Phase 2",
+      "home": "Romainville",
+      "away": "Villepinte Handball Club",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2026-07-16-daf470ab-c150-4c21-8135-e03ed9096337.webp",
+      "score": [
+        6,
+        29
+      ]
+    },
+    {
+      "id": "2751234",
+      "date": "2026-11-22T09:30:00",
+      "journee": 3,
+      "competition": "U13 filles · Phase 2",
+      "home": "Handball Club de Gagny 1B",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2025-09-26-ecb753ef-ac66-459a-849b-b5caaa00e5d8.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        10,
+        0
+      ],
+      "forfait": "away"
+    }
+  ]
+}

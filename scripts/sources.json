@@ -3,6 +3,20 @@
     "competition": "+16M 1ère Division Territoriale",
     "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/16m-1ere-division-territoriale-32471/poule-190940/",
     "club": "ROMAINVILL",
+    "classement": true,
+    "id": "sm1"
+  },
+  {
+    "id": "u13f",
+    "competition": "U13 filles · Phase 1",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u13f-32953/poule-195936/",
+    "club": "ROMAINVILL"
+  },
+  {
+    "id": "u13f",
+    "competition": "U13 filles · Phase 2",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u13f-32953/poule-199204/",
+    "club": "ROMAINVILL",
     "classement": true
   }
 ]
