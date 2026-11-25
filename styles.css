@@ -304,3 +304,36 @@ section{padding:96px 0}
 
 .tl-item--todo .tl-card{border-style:dashed;background:transparent}
 .tl-item--todo .tl-year{color:rgba(246,184,0,.45)}
+
+/* ===== Classement ===== */
+.standings{margin-top:56px;background:var(--navy);border:1px solid var(--line);border-radius:20px;padding:28px}
+.standings__head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.standings__head h3{font-size:2.4rem}
+.standings__comp{color:var(--muted);margin-top:4px;font-size:.9rem}
+.standings__live{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted)}
+.standings__live i{width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.standings__scroll{overflow-x:auto}
+.standings__table{width:100%;border-collapse:collapse;min-width:340px}
+.standings__table th{font-family:var(--h);text-transform:uppercase;letter-spacing:.08em;font-size:.95rem;color:var(--muted);padding:8px 10px;text-align:center;border-bottom:1px solid var(--line)}
+.standings__table td{padding:10px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06);font-variant-numeric:tabular-nums}
+.standings__table .left{text-align:left}
+.standings__table tbody tr:hover{background:rgba(255,255,255,.04)}
+.standings__table .rank{font-family:var(--h);font-weight:800;font-size:1.2rem;color:var(--muted)}
+.standings__table .pts{font-family:var(--h);font-weight:800;font-size:1.3rem}
+.standings__table .team-cell{font-weight:600;white-space:nowrap}
+.standings__table tr.us{background:linear-gradient(90deg,rgba(246,184,0,.22),rgba(246,184,0,.06))}
+.standings__table tr.us td{border-bottom-color:rgba(246,184,0,.4)}
+.standings__table tr.us .rank,.standings__table tr.us .pts{color:var(--gold)}
+.standings__table tr.us .team-cell{color:var(--gold)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin:0 2px}
+.dot.w{background:#17a34a}.dot.l{background:#d33}.dot.d{background:#9ca3af}
+.standings .mini-logo{height:24px;width:24px;margin-right:8px}
+@media (max-width:560px){
+  .standings{padding:18px 12px}
+  .standings__table .opt{display:none}
+  .standings__table td,.standings__table th{padding:9px 6px}
+  .standings__table .team-cell{white-space:normal}
+}
+
+.standings__table .form{white-space:nowrap}

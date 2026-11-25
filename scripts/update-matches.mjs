@@ -96,3 +96,32 @@ const matches = [...found.values()].sort((a, b) => a.date.localeCompare(b.date))
 if (!matches.length) throw new Error('Aucun match trouvé : fichier existant conservé.');
 await writeFile(OUT, JSON.stringify({ club: 'Romainville', updated: new Date().toISOString(), source: 'ffhandball.fr', matches }, null, 2) + '\n');
 console.log(`${matches.length} matchs écrits dans ${fileURLToPath(OUT)}`);
+
+// ---- Classement de l'équipe fanion (première source marquée "classement": true) ----
+const STANDINGS_OUT = new URL('data/standings.json', root);
+const main = sources.find(s => s.classement);
+if (main) {
+  try {
+    await sleep(1000);
+    const base = main.url.replace(/\/?$/, '/');
+    const page = await getPage(`${base}classements/`);
+    const rows = extractArray(page, 'classements');
+    if (!rows?.length) throw new Error('classement introuvable (le site a-t-il changé ?)');
+    const table = [];
+    for (const r of rows) {
+      table.push({
+        rank: Number(r.place),
+        team: pretty(r.equipe_libelle),
+        logo: await logo(r.structure_logo, r.equipe_logoActif),
+        points: Number(r.point), played: Number(r.joue), won: Number(r.gagne), drawn: Number(r.nul), lost: Number(r.perdu),
+        for: Number(r.butPlus), against: Number(r.butMoins), diff: Number(r.diff),
+        form: String(r.dernieresRencontres || '').split(';').filter(Boolean).map(Number) // 1 victoire, 0 nul, -1 défaite (du plus ancien au plus récent)
+      });
+    }
+    table.sort((a, b) => a.rank - b.rank);
+    await writeFile(STANDINGS_OUT, JSON.stringify({ competition: main.competition, updated: new Date().toISOString(), table }, null, 2) + '\n');
+    console.log(`Classement : ${table.length} équipes écrites`);
+  } catch (err) {
+    console.warn('Classement non mis à jour :', err.message);
+  }
+}

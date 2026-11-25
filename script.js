@@ -99,6 +99,34 @@ async function loadMatches() {
 loadMatches();
 setInterval(loadMatches, REFRESH_MS);
 
+// Classement de l'équipe fanion : lu depuis data/standings.json
+async function loadStandings() {
+  const body = document.getElementById('st-body');
+  if (!body) return;
+  try {
+    const r = await fetch('data/standings.json', { cache: 'no-store' });
+    if (!r.ok) throw new Error(r.status);
+    const d = await r.json();
+    document.getElementById('st-comp').textContent = d.competition || '';
+    const up = new Date(d.updated);
+    if (!isNaN(up)) document.getElementById('st-updated').textContent = 'Mis à jour le ' + up.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' }) + ' à ' + fmtTime(up);
+    const dot = f => '<i class="dot ' + (f > 0 ? 'w' : f < 0 ? 'l' : 'd') + '" title="' + (f > 0 ? 'Victoire' : f < 0 ? 'Défaite' : 'Nul') + '"></i>';
+    body.innerHTML = d.table.map(t => {
+      const us = isUs(t.team);
+      const logo = us ? 'assets/logo.png' : t.logo;
+      return '<tr class="' + (us ? 'us' : '') + '"><td class="rank">' + t.rank + '</td><td class="left team-cell">' +
+        (logo ? '<img class="mini-logo" src="' + esc(logo) + '" alt="" loading="lazy">' : '') + esc(us ? 'HBC Romainville' : t.team) +
+        '</td><td class="pts">' + t.points + '</td><td>' + t.played + '</td><td class="opt">' + t.won + '</td><td class="opt">' + t.drawn +
+        '</td><td class="opt">' + t.lost + '</td><td class="opt">' + (t.diff > 0 ? '+' : '') + t.diff + '</td><td class="opt form">' + t.form.map(dot).join('') + '</td></tr>';
+    }).join('');
+  } catch (err) {
+    console.warn('Classement : impossible de charger', err);
+    body.innerHTML = '<tr><td colspan="9" class="left">Classement indisponible pour le moment.</td></tr>';
+  }
+}
+loadStandings();
+setInterval(loadStandings, REFRESH_MS);
+
 // Compteurs animés
 const counters = document.querySelectorAll('[data-count]');
 const countObs = new IntersectionObserver(entries => {
