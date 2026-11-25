@@ -2,7 +2,10 @@ name: Mise à jour des matchs
 
 on:
   schedule:
-    - cron: '*/30 * * * *'   # toutes les 30 min (réduire à */15 si besoin)
+    # Week-end (samedi, dimanche) et lundi : toutes les 3 h, les jours de match et le lendemain
+    - cron: '0 */3 * * 6,0,1'
+    # Mardi à vendredi : une seule fois par jour, à 6 h UTC
+    - cron: '0 6 * * 2-5'
   workflow_dispatch:
 
 permissions:

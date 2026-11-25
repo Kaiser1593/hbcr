@@ -63,6 +63,9 @@ async function logo(file, show) {
 }
 
 const found = new Map();
+let skipped = 0;
+let previous = [];
+try { previous = JSON.parse(await readFile(OUT, 'utf8')).matches ?? []; } catch { /* premier lancement */ }
 for (const src of sources) {
   const base = src.url.replace(/\/?$/, '/');
   const first = await getPage(base);
@@ -70,6 +73,17 @@ for (const src of sources) {
   const total = journees.length || 22;
   console.log(`${src.competition} : ${total} journées`);
   for (let n = 1; n <= total; n++) {
+    // Journée terminée depuis plus d'une semaine et déjà connue : on garde le résultat enregistré, sans requête.
+    // (FULL=1 force la relecture de toutes les journées.)
+    const info = journees.find(j => j.journee_numero === n);
+    // Journées qui ne commencent que dans plus de 3 semaines : inutile de les lire pour l'instant.
+    if (!process.env.FULL && info && new Date(info.date_debut).getTime() > Date.now() + 21 * 864e5) break;
+    const old = previous.filter(m => m.journee === n && m.score && m.competition === src.competition);
+    if (!process.env.FULL && info && old.length && new Date(info.date_fin).getTime() < Date.now() - 7 * 864e5) {
+      old.forEach(m => found.set(m.id, m));
+      skipped++;
+      continue;
+    }
     await sleep(1000);
     const page = await getPage(`${base}journee-${n}/`);
     const list = extractArray(page, 'rencontres');
@@ -95,7 +109,7 @@ for (const src of sources) {
 const matches = [...found.values()].sort((a, b) => a.date.localeCompare(b.date));
 if (!matches.length) throw new Error('Aucun match trouvé : fichier existant conservé.');
 await writeFile(OUT, JSON.stringify({ club: 'Romainville', updated: new Date().toISOString(), source: 'ffhandball.fr', matches }, null, 2) + '\n');
-console.log(`${matches.length} matchs écrits dans ${fileURLToPath(OUT)}`);
+console.log(`${matches.length} matchs écrits dans ${fileURLToPath(OUT)} (${skipped} journées déjà jouées non relues)`);
 
 // ---- Classement de l'équipe fanion (première source marquée "classement": true) ----
 const STANDINGS_OUT = new URL('data/standings.json', root);
