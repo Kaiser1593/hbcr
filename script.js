@@ -13,6 +13,7 @@ nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 // Ombre du header au scroll
 const header = document.getElementById('header');
 addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 10), { passive: true });
+header.classList.toggle('scrolled', scrollY > 10); // page rechargée en cours de défilement
 
 // Compte à rebours du prochain match
 const cd = document.getElementById('countdown');
@@ -160,3 +161,11 @@ const revObs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revObs.unobserve(e.target); } });
 }, { threshold: .12 });
 revealEls.forEach(el => revObs.observe(el));
+
+// Vidéo d'ambiance du hero (assets/hero.mp4) : si elle se charge, le fond n'est plus qu'un voile sombre
+const heroVideo = document.querySelector('.hero__video');
+if (heroVideo) {
+  const ok = () => heroVideo.closest('.hero').classList.add('has-video');
+  heroVideo.addEventListener('loadeddata', ok);
+  if (heroVideo.readyState >= 2) ok();
+}

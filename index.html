@@ -14,7 +14,7 @@
 <body>
 
   <!-- Navigation -->
-  <header class="header" id="header">
+  <header class="header header--split header--over" id="header">
     <div class="container header__inner">
       <a href="#accueil" class="brand" aria-label="HBC Romainville – accueil">
         <img src="assets/logo.png" alt="Logo HBC Romainville">
@@ -23,11 +23,24 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" id="nav">
-        <a href="#matchs">Matchs</a>
-        <a href="#actus">Actualités</a>
-        <a href="collectifs.html">Collectifs</a>
-        <a href="#club">Le club</a>
-        <a href="#partenaires">Partenaires</a>
+        <div class="nav__group nav__group--left">
+          <a href="#actus">Actualités</a>
+          <a href="histoire.html">Club</a>
+          <div class="nav-item has-sub">
+            <a href="equipe.html">Séniors G</a>
+            <div class="subnav"><a href="equipe.html">Équipe</a><a href="classement.html">Classement</a></div>
+          </div>
+          <div class="nav-item has-sub">
+            <a href="collectifs.html">Collectifs</a>
+            <div class="subnav subnav--wide"><a href="collectifs.html">Tous les collectifs</a><a href="collectifs.html#sm1">Seniors masculins</a><a href="collectifs.html#sf1">Seniors féminines</a><a href="collectifs.html#u18g">U18 garçons</a><a href="collectifs.html#u18f">U18 filles</a><a href="collectifs.html#u15g">U15 garçons</a><a href="collectifs.html#u15f">U15 filles</a><a href="collectifs.html#u13g">U13 garçons</a><a href="collectifs.html#u13f">U13 filles</a><a href="collectifs.html#u11m">U11 mixte</a><a href="collectifs.html#ecole">École de hand</a><a href="entraineurs.html" class="subnav__sep">Entraîneurs</a></div>
+          </div>
+        </div>
+        <div class="nav__group nav__group--right">
+          <a href="#matchs">Matchs</a>
+          <a href="#partenaires">Partenaires</a>
+          <a class="nav__soon" aria-disabled="true">Boutique</a>
+          <a href="#contact">Contact</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -35,7 +48,10 @@
   <main>
 
     <!-- HERO -->
-    <section class="hero" id="accueil">
+    <section class="hero hero--cover" id="accueil">
+      <video class="hero__video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="assets/hero.mp4" type="video/mp4">
+      </video>
       <div class="hero__bg"></div>
       <div class="container hero__inner">
         <div class="hero__text">
@@ -43,11 +59,9 @@
           <h1>Une ville.<br>Un club.<br><span>Une passion.</span></h1>
           <p class="hero__lead">Du baby hand aux équipes seniors, le HBCR rassemble les Romainvillois autour des valeurs du sport : esprit d'équipe, respect et dépassement de soi.</p>
           <div class="hero__cta">
-            <a href="#matchs" class="btn btn--ghost">Voir les matchs</a>
+            <a href="#matchs" class="btn btn--gold">Voir les matchs</a>
+            <a href="collectifs.html" class="btn btn--ghost">Nos collectifs</a>
           </div>
-        </div>
-        <div class="hero__logo">
-          <img src="assets/logo.png" alt="Blason HBC Romainville">
         </div>
       </div>
       <div class="hero__stats container">
@@ -244,10 +258,7 @@
           <div>Département 93</div>
           <div>Région Île-de-France</div>
           <div>Fédération Française de Handball</div>
-          <div>Partenaire 1</div>
-          <div>Partenaire 2</div>
-          <div>Partenaire 3</div>
-          <div>Votre logo ici</div>
+          <div>JV RENOV</div>
         </div>
       </div>
     </section>
@@ -265,8 +276,13 @@
           </ul>
         </div>
         <div class="contact__map">
-          <iframe title="Carte de Romainville" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=2.4150%2C48.8756%2C2.4680%2C48.9000&layer=mapnik"></iframe>
+          <iframe title="Carte : gymnase Jean Guimier, 15 rue Pasteur, Romainville" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=2.4385%2C48.8760%2C2.4475%2C48.8820&layer=mapnik&marker=48.87899%2C2.44299"></iframe>
+          <div class="map-links">
+            <span>📍 Gymnase Jean Guimier · 15 rue Pasteur, 93230 Romainville</span>
+            <a href="https://www.openstreetmap.org/?mlat=48.87899&amp;mlon=2.44299#map=17/48.87899/2.44299" target="_blank" rel="noopener">Agrandir la carte</a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=15+rue+Pasteur+93230+Romainville" target="_blank" rel="noopener">Itinéraire</a>
+          </div>
         </div>
       </div>
     </section>
@@ -298,7 +314,7 @@
     </div>
     <div class="footer__bottom container">
       <span>© 2026 HBC Romainville — Tous droits réservés</span>
-      <span><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></span>
+      <span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span>
     </div>
   </footer>
 

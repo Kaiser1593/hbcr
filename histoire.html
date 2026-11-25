@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  <header class="header" id="header">
+  <header class="header header--split" id="header">
     <div class="container header__inner">
       <a href="index.html" class="brand" aria-label="HBC Romainville – accueil">
         <img src="assets/logo.png" alt="Logo HBC Romainville">
@@ -22,13 +22,24 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" id="nav">
-        <a href="index.html#matchs">Matchs</a>
-        <a href="index.html#actus">Actualités</a>
-        <a href="collectifs.html">Collectifs</a>
-        <a href="index.html#club">Le club</a>
-        <a href="index.html#boutique">Boutique</a>
-        <a href="index.html#partenaires">Partenaires</a>
-        <a href="index.html#inscription" class="btn btn--gold btn--sm">S'inscrire</a>
+        <div class="nav__group nav__group--left">
+          <a href="index.html#actus">Actualités</a>
+          <a href="histoire.html">Club</a>
+          <div class="nav-item has-sub">
+            <a href="equipe.html">Séniors G</a>
+            <div class="subnav"><a href="equipe.html">Équipe</a><a href="classement.html">Classement</a></div>
+          </div>
+          <div class="nav-item has-sub">
+            <a href="collectifs.html">Collectifs</a>
+            <div class="subnav subnav--wide"><a href="collectifs.html">Tous les collectifs</a><a href="collectifs.html#sm1">Seniors masculins</a><a href="collectifs.html#sf1">Seniors féminines</a><a href="collectifs.html#u18g">U18 garçons</a><a href="collectifs.html#u18f">U18 filles</a><a href="collectifs.html#u15g">U15 garçons</a><a href="collectifs.html#u15f">U15 filles</a><a href="collectifs.html#u13g">U13 garçons</a><a href="collectifs.html#u13f">U13 filles</a><a href="collectifs.html#u11m">U11 mixte</a><a href="collectifs.html#ecole">École de hand</a><a href="entraineurs.html" class="subnav__sep">Entraîneurs</a></div>
+          </div>
+        </div>
+        <div class="nav__group nav__group--right">
+          <a href="index.html#matchs">Matchs</a>
+          <a href="index.html#partenaires">Partenaires</a>
+          <a class="nav__soon" aria-disabled="true">Boutique</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -201,7 +212,7 @@
     </div>
     <div class="footer__bottom container">
       <span>© 2026 HBC Romainville — Tous droits réservés</span>
-      <span><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></span>
+      <span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span>
     </div>
   </footer>
 
