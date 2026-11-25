@@ -17,7 +17,7 @@ header.classList.toggle('scrolled', scrollY > 10); // page rechargée en cours d
 
 // Compte à rebours du prochain match
 const cd = document.getElementById('countdown');
-let target = new Date(cd.dataset.target).getTime();
+let target = Date.now();
 const pad = n => String(n).padStart(2, '0');
 function tick() {
   let diff = Math.max(0, target - Date.now());
@@ -83,6 +83,15 @@ function renderMatches(data) {
     teamBlock(document.getElementById('nm-home'), next.home, next.homeLogo);
     teamBlock(document.getElementById('nm-away'), next.away, next.awayLogo);
     document.getElementById('nm-venue').textContent = '📍 ' + (next.venue || (isUs(next.home) ? 'Gymnase Jean Guimier' : 'À l\'extérieur'));
+    const home = isUs(next.home);
+    const where = document.getElementById('nm-where');
+    where.textContent = home ? 'À domicile' : 'À l\'extérieur';
+    where.classList.toggle('is-away', !home);
+    const route = document.getElementById('nm-route');
+    if (home) {
+      route.href = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent('Gymnase Jean Guimier, 15 rue Pasteur, 93230 Romainville');
+      route.hidden = false;
+    } else route.hidden = true;
     target = next.d.getTime();
     tick();
   }

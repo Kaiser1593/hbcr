@@ -66,7 +66,7 @@
       </div>
       <div class="hero__stats container">
         <div><strong data-count="320">0</strong><span>licenciés</span></div>
-        <div><strong data-count="15">0</strong><span>équipes</span></div>
+        <div><strong data-count="10">0</strong><span>équipes</span></div>
         <div><strong data-count="25">0</strong><span>bénévoles</span></div>
         <div><strong data-count="12">0</strong><span>entraîneurs</span></div>
       </div>
@@ -75,79 +75,51 @@
     <!-- PROCHAIN MATCH -->
     <section class="nextmatch" id="matchs">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Domicile</p>
-          <h2>Prochain match</h2>
-        </div>
-        <div class="match-card">
-          <div class="match-card__meta">
-            <span class="tag" id="nm-comp">Département 1 · Masculin</span>
-            <span id="nm-date">Samedi 5 décembre 2026 · 20h30</span>
+        <div class="nm-card">
+          <div class="nm-card__top">
+            <span class="nm-ribbon">Prochain match</span>
+            <span class="nm-where" id="nm-where"></span>
           </div>
-          <div class="match-card__teams">
+          <p class="nm-comp" id="nm-comp"></p>
+          <p class="nm-date" id="nm-date"></p>
+          <div class="nm-teams">
             <div class="team" id="nm-home">
               <img src="assets/logo.png" alt="HBC Romainville">
               <strong>HBC Romainville</strong>
             </div>
             <div class="vs">
               <span>VS</span>
-              <div class="countdown" id="countdown" data-target="2026-12-05T20:30:00">
-                <div><b id="cd-d">00</b><small>jours</small></div>
-                <div><b id="cd-h">00</b><small>heures</small></div>
-                <div><b id="cd-m">00</b><small>min</small></div>
-                <div><b id="cd-s">00</b><small>sec</small></div>
-              </div>
             </div>
             <div class="team" id="nm-away">
-              <div class="team__crest">ADV</div>
-              <strong>Équipe adverse</strong>
+              <strong></strong>
             </div>
           </div>
-          <div class="match-card__foot">
-            <span id="nm-venue"> Gymnase Guimier Romainville</span>
+          <div class="countdown countdown--big" id="countdown">
+            <div><b id="cd-d">00</b><small>jours</small></div>
+            <div><b id="cd-h">00</b><small>heures</small></div>
+            <div><b id="cd-m">00</b><small>min</small></div>
+            <div><b id="cd-s">00</b><small>sec</small></div>
+          </div>
+          <div class="nm-foot">
+            <span id="nm-venue"></span>
+            <div class="nm-actions">
+              <a class="btn btn--gold" id="nm-route" href="#" target="_blank" rel="noopener" hidden>Itinéraire</a>
+              <a class="btn btn--ghost" href="classement.html">Résultats &amp; classement</a>
+            </div>
           </div>
         </div>
 
         <div class="results">
           <div class="results__col">
             <h3>Derniers résultats</h3>
-            <ul class="match-list" id="resultsList">
-              <li><span class="date">28 nov.</span><span class="vsname">Romainville <em>vs</em> Équipe A</span><span class="score win">29 – 24</span></li>
-              <li><span class="date">21 nov.</span><span class="vsname">Équipe B <em>vs</em> Romainville</span><span class="score lose">27 – 22</span></li>
-              <li><span class="date">14 nov.</span><span class="vsname">Romainville <em>vs</em> Équipe C</span><span class="score draw">25 – 25</span></li>
-              <li><span class="date">07 nov.</span><span class="vsname">Équipe D <em>vs</em> Romainville</span><span class="score win">23 – 28</span></li>
-            </ul>
+            <ul class="match-list" id="resultsList"><li>Chargement…</li></ul>
           </div>
           <div class="results__col">
             <h3>Prochaines rencontres</h3>
-            <ul class="match-list" id="upcomingList">
-              <li><span class="date">12 déc.</span><span class="vsname">Équipe E <em>vs</em> Romainville</span><span class="score next">20h00</span></li>
-              <li><span class="date">19 déc.</span><span class="vsname">Romainville <em>vs</em> Équipe F</span><span class="score next">20h30</span></li>
-              <li><span class="date">09 janv.</span><span class="vsname">Romainville <em>vs</em> Équipe G</span><span class="score next">18h30</span></li>
-              <li><span class="date">16 janv.</span><span class="vsname">Équipe H <em>vs</em> Romainville</span><span class="score next">21h00</span></li>
-            </ul>
+            <ul class="match-list" id="upcomingList"><li>Chargement…</li></ul>
           </div>
         </div>
-
-        <div class="standings" id="standings">
-          <div class="standings__head">
-            <div>
-              <p class="eyebrow">Équipe fanion</p>
-              <h3>Classement</h3>
-              <p class="standings__comp" id="st-comp">+16M 1ère Division Territoriale</p>
-            </div>
-            <span class="standings__live"><i></i><span id="st-updated">Mise à jour automatique</span></span>
-          </div>
-          <div class="standings__scroll">
-            <table class="standings__table">
-              <thead>
-                <tr><th>#</th><th class="left">Équipe</th><th>Pts</th><th>J</th><th class="opt">G</th><th class="opt">N</th><th class="opt">P</th><th class="opt">Diff</th><th class="opt">Forme</th></tr>
-              </thead>
-              <tbody id="st-body"><tr><td colspan="9" class="left">Chargement du classement…</td></tr></tbody>
-            </table>
-          </div>
-          <p class="standings__hint" id="st-hint">↓ Faites défiler pour voir toutes les équipes</p>
-        </div>
+        <div class="results__more"><a class="link-arrow" href="classement.html">Voir le classement et tous les résultats →</a></div>
         <p class="note">Données issues du site de la fédération (ffhandball.fr).</p>
       </div>
     </section>
@@ -173,28 +145,26 @@
               <span class="card__more">Voir les détails →</span>
             </div>
           </a>
-          <article class="card">
-            <div class="card__img card__img--2"></div>
+          <article class="card card--news">
+            <div class="card__art card__art--gold">
+              <span class="card__chip">Stage</span>
+              <svg class="card__icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="22"/><path d="M32 10c6 8 6 36 0 44M32 10c-6 8-6 36 0 44M10 32c8-6 36-6 44 0M10 32c8 6 36 6 44 0"/></svg>
+              <div class="card__date"><b>26</b><span>nov.</span></div>
+            </div>
             <div class="card__body">
-              <time>26 novembre 2026</time>
               <h3>Stage de Noël : découvrez le programme</h3>
               <p>Pour les 6-14 ans, une semaine de handball et de jeux pendant les vacances.</p>
             </div>
           </article>
-          <article class="card">
-            <div class="card__img card__img--3"></div>
+          <article class="card card--news">
+            <div class="card__art card__art--blue">
+              <span class="card__chip">Jeunes</span>
+              <svg class="card__icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10h24v14a12 12 0 0 1-24 0V10z"/><path d="M20 14h-8c0 8 3 13 9 14M44 14h8c0 8-3 13-9 14M32 36v10M22 54h20M26 46h12"/></svg>
+              <div class="card__date"><b>20</b><span>nov.</span></div>
+            </div>
             <div class="card__body">
-              <time>20 novembre 2026</time>
               <h3>Nos jeunes brillent en championnat départemental</h3>
               <p>Les -15 et -18 ans enchaînent les bons résultats en ce début de saison.</p>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card__img card__img--4"></div>
-            <div class="card__body">
-              <time>12 novembre 2026</time>
-              <h3>Appel aux bénévoles</h3>
-              <p>Table de marque, buvette, accompagnement : rejoignez l'équipe qui fait vivre le club.</p>
             </div>
           </article>
         </div>
@@ -282,7 +252,7 @@
           <div class="map-links">
             <span>📍 Gymnase Jean Guimier · 15 rue Pasteur, 93230 Romainville</span>
             <a href="https://www.openstreetmap.org/?mlat=48.87899&amp;mlon=2.44299#map=17/48.87899/2.44299" target="_blank" rel="noopener">Agrandir la carte</a>
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=15+rue+Pasteur+93230+Romainville" target="_blank" rel="noopener">Itinéraire</a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Gymnase+Jean+Guimier%2C+15+rue+Pasteur%2C+93230+Romainville" target="_blank" rel="noopener">Itinéraire</a>
           </div>
         </div>
       </div>
@@ -310,7 +280,6 @@
         <h4>Suivez-nous</h4>
         <a href="#">Instagram</a>
         <a href="#">Facebook</a>
-        <a href="#">YouTube</a>
       </div>
     </div>
     <div class="footer__bottom container">
@@ -320,5 +289,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="header.js"></script>
 </body>
 </html>
