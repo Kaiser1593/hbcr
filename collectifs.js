@@ -54,21 +54,14 @@ document.querySelectorAll('[data-feed]').forEach(async box => {
   try {
     const data = await (await fetch(dataPath(box.dataset.feed, 'matches.json'), { cache: 'no-store' })).json();
     const all = data.matches.map(m => ({ ...m, d: new Date(m.date) })).sort((a, b) => a.d - b.d);
-    const next = all.filter(m => !m.score && m.d.getTime() + 2 * 36e5 > Date.now()).slice(0, 4);
+    const next = all.filter(m => !m.score && m.d.getTime() + 2 * 36e5 > Date.now()).slice(0, 3); // 3 prochaines rencontres
     const cls = m => { const [h, a] = m.score, us = isUs(m.home) ? h : a, them = isUs(m.home) ? a : h; return us > them ? 'win' : us < them ? 'lose' : 'draw'; };
     const line = m => row(m, m.score[0] + ' – ' + m.score[1] + forfeitTag(m), cls(m));
     const playedUl = box.querySelector('[data-role=played]');
-    if (all.some(m => m.phase)) {
-      // résultats regroupés par phase : délayages, brassages, championnat
-      const html = PHASE_ORDER.map(ph => {
-        const ms = all.filter(m => m.score && m.phase === ph).reverse();
-        return ms.length ? '<h5 class="phase-title">' + PHASES[ph] + '</h5><ul class="match-list">' + ms.map(line).join('') + '</ul>' : '';
-      }).join('');
-      playedUl.parentElement.innerHTML = '<h4>Résultats</h4>' + (html || '<ul class="match-list"><li>Aucun résultat.</li></ul>');
-    } else {
-      const played = all.filter(m => m.score).reverse().slice(0, 6);
-      playedUl.innerHTML = played.map(line).join('') || '<li>Aucun résultat.</li>';
-    }
+    // 3 derniers résultats, toutes phases confondues ; la phase est indiquée sur chaque ligne quand il y en a
+    const phaseTag = m => (m.phase && PHASES[m.phase] ? ' <small class="phase-tag">' + PHASES[m.phase] + '</small>' : '');
+    const played = all.filter(m => m.score).reverse().slice(0, 3);
+    playedUl.innerHTML = played.map(m => row(m, m.score[0] + ' – ' + m.score[1] + forfeitTag(m), cls(m)).replace('</span><span class="score', phaseTag(m) + '</span><span class="score')).join('') || '<li>Aucun résultat.</li>';
     box.querySelector('[data-role=next]').innerHTML = next.map(m => row(m, fmtTime(m.d), 'next')).join('') || '<li>Calendrier à venir.</li>';
   } catch (e) { console.warn('Matchs indisponibles', box.dataset.feed, e); }
 });

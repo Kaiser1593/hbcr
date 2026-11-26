@@ -792,3 +792,12 @@ body.sidepanel-open{overflow:hidden}
 
 /* Repère clavier discret : un fin contour, visible uniquement à la navigation au clavier (jamais au clic ni au toucher) */
 .btn:focus-visible,.train-row__btn:focus-visible{outline:2px solid rgba(255,255,255,.65);outline-offset:3px}
+
+.phase-tag{display:inline-block;margin-left:8px;padding:0 8px;border-radius:999px;background:rgba(255,255,255,.12);color:var(--muted);font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;vertical-align:middle}
+
+/* Petit effet sur les boutons : léger grossissement « ressort » au survol, enfoncement à l'appui (sans halo ni changement de couleur) */
+.btn,.train-row__btn{transition:transform .28s cubic-bezier(.34,1.56,.64,1)}
+@media (hover:hover){
+  .btn:hover,.btn--gold:hover,.btn--ghost:hover,.btn--dark:hover,.train-row__btn:hover{transform:scale(1.04)}
+}
+.btn:active,.train-row__btn:active{transform:scale(.95);transition-duration:.12s}

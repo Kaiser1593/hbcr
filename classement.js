@@ -26,8 +26,8 @@ async function loadMatches() {
   try {
     const data = await (await fetch('data/sm1/matches.json', { cache: 'no-store' })).json();
     const all = data.matches.map(m => ({ ...m, d: new Date(m.date) })).sort((a, b) => a.d - b.d);
-    const played = all.filter(m => m.score).reverse();
-    const next = all.filter(m => !m.score && m.d.getTime() + 2 * 36e5 > Date.now());
+    const played = all.filter(m => m.score).reverse().slice(0, 3); // 3 derniers résultats
+    const next = all.filter(m => !m.score && m.d.getTime() + 2 * 36e5 > Date.now()).slice(0, 3); // 3 prochaines rencontres
     const cls = m => { const [h, a] = m.score, us = isUs(m.home) ? h : a, them = isUs(m.home) ? a : h; return us > them ? 'win' : us < them ? 'lose' : 'draw'; };
     document.getElementById('resultsList').innerHTML = played.map(m => row(m, m.score[0] + ' – ' + m.score[1], cls(m))).join('') || '<li>Aucun résultat pour le moment.</li>';
     document.getElementById('upcomingList').innerHTML = next.map(m => row(m, fmtTime(m.d), 'next')).join('') || '<li>Calendrier à venir.</li>';
