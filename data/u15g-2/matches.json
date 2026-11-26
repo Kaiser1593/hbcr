@@ -1,0 +1,37 @@
+{
+  "club": "Romainville",
+  "updated": "2026-11-26T00:01:52.438Z",
+  "source": "ffhandball.fr",
+  "matches": [
+    {
+      "id": "2751873",
+      "date": "2026-11-14T15:45:00",
+      "journee": 2,
+      "competition": "U15 garçons 2 · Brassages",
+      "phase": "brassages",
+      "home": "Lilas-Pre Handball",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2026-10-22-e8cd16e2-979b-49a4-a0d2-3efe3b512975.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        25,
+        29
+      ]
+    },
+    {
+      "id": "2751875",
+      "date": "2026-11-21T14:00:00",
+      "journee": 3,
+      "competition": "U15 garçons 2 · Brassages",
+      "phase": "brassages",
+      "home": "Romainville",
+      "away": "Tremblay-En-France Handball 1B",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2021-07-26-3f4be8be-e1f1-4361-aa5d-998a32526326.webp",
+      "score": [
+        17,
+        50
+      ]
+    }
+  ]
+}

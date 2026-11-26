@@ -1,0 +1,140 @@
+{
+  "updated": "2026-11-26T00:01:57.613Z",
+  "phases": [
+    {
+      "phase": "delayages",
+      "competition": "U11 mixte 1 · Délayages",
+      "table": [
+        {
+          "rank": 1,
+          "team": "Romainville",
+          "logo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+          "points": 6,
+          "played": 2,
+          "won": 2,
+          "drawn": 0,
+          "lost": 0,
+          "for": 52,
+          "against": 15,
+          "diff": 37,
+          "form": [
+            1,
+            1
+          ]
+        },
+        {
+          "rank": 2,
+          "team": "Handball Club de Gagny 1B",
+          "logo": "assets/clubs/2025-09-26-ecb753ef-ac66-459a-849b-b5caaa00e5d8.webp",
+          "points": 4,
+          "played": 2,
+          "won": 1,
+          "drawn": 0,
+          "lost": 1,
+          "for": 28,
+          "against": 34,
+          "diff": -6,
+          "form": [
+            1,
+            -1
+          ]
+        },
+        {
+          "rank": 3,
+          "team": "Section Rainceenne de Handball",
+          "logo": "assets/clubs/2021-02-09-e9c65205-48d9-4ee4-b542-292d90019f66.webp",
+          "points": 2,
+          "played": 2,
+          "won": 0,
+          "drawn": 0,
+          "lost": 2,
+          "for": 17,
+          "against": 48,
+          "diff": -31,
+          "form": [
+            -1,
+            -1
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "brassages",
+      "competition": "U11 mixte 1 · Brassages",
+      "table": [
+        {
+          "rank": 1,
+          "team": "Romainville",
+          "logo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+          "points": 9,
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "for": 64,
+          "against": 38,
+          "diff": 26,
+          "form": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "rank": 2,
+          "team": "Villemomble Handball",
+          "logo": "assets/clubs/2023-08-30-af255a31-2107-41d0-b2f7-4718619043b5.webp",
+          "points": 7,
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "for": 66,
+          "against": 48,
+          "diff": 18,
+          "form": [
+            1,
+            1,
+            -1
+          ]
+        },
+        {
+          "rank": 3,
+          "team": "Handball Club de Gagny",
+          "logo": "assets/clubs/2025-09-26-ecb753ef-ac66-459a-849b-b5caaa00e5d8.webp",
+          "points": 5,
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "for": 49,
+          "against": 54,
+          "diff": -5,
+          "form": [
+            -1,
+            -1,
+            1
+          ]
+        },
+        {
+          "rank": 4,
+          "team": "Noisy-Le-Grand Handball",
+          "logo": "assets/clubs/2021-02-09-e7634555-ed5c-4d28-871e-3b3deaa64928.webp",
+          "points": 3,
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "for": 34,
+          "against": 73,
+          "diff": -39,
+          "form": [
+            -1,
+            -1,
+            -1
+          ]
+        }
+      ]
+    }
+  ]
+}

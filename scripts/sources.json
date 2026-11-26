@@ -4,19 +4,158 @@
     "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/16m-1ere-division-territoriale-32471/poule-190940/",
     "club": "ROMAINVILL",
     "classement": true,
-    "id": "sm1"
+    "id": "sm1",
+    "label": "SM1"
   },
   {
     "id": "u13f",
-    "competition": "U13 filles · Phase 1",
+    "phase": "delayages",
+    "competition": "U13 filles · Délayages",
     "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u13f-32953/poule-195936/",
-    "club": "ROMAINVILL"
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "U13F"
   },
   {
     "id": "u13f",
-    "competition": "U13 filles · Phase 2",
+    "phase": "brassages",
+    "competition": "U13 filles · Brassages",
     "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u13f-32953/poule-199204/",
     "club": "ROMAINVILL",
-    "classement": true
+    "classement": true,
+    "label": "U13F"
+  },
+  {
+    "id": "u13g",
+    "phase": "delayages",
+    "competition": "U13 garçons · Délayages",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u13m-32954/poule-194901/",
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "U13G"
+  },
+  {
+    "id": "u13g",
+    "phase": "brassages",
+    "competition": "U13 garçons · Brassages",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u13m-32954/poule-199260/",
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "U13G"
+  },
+  {
+    "id": "sf1",
+    "competition": "+16F 1ère Division Territoriale",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/16f-1ere-division-territoriale-32697/poule-192077/",
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "SF1"
+  },
+  {
+    "id": "u18g",
+    "phase": "delayages",
+    "competition": "U18 garçons · Délayages",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u18m-32950/poule-195668/",
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "U18G"
+  },
+  {
+    "id": "u18g",
+    "phase": "brassages",
+    "competition": "U18 garçons · Brassages",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u18m-32950/poule-199183/",
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "U18G"
+  },
+  {
+    "id": "u18f",
+    "competition": "U18 filles · Phase de poules",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u18f-32958/poule-197136/",
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "U18F"
+  },
+  {
+    "id": "u15f",
+    "phase": "delayages",
+    "competition": "U15 filles · Délayages",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u15f-32951/poule-196664/",
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "U15F"
+  },
+  {
+    "id": "u15f",
+    "phase": "brassages",
+    "competition": "U15 filles · Brassages",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u15f-32951/poule-199193/",
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "U15F"
+  },
+  {
+    "id": "u15g-1",
+    "phase": "delayages",
+    "competition": "U15 garçons 1 · Délayages",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u15m-32952/poule-196674/",
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "U15G 1"
+  },
+  {
+    "id": "u15g-1",
+    "phase": "brassages",
+    "competition": "U15 garçons 1 · Brassages",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u15m-32952/poule-199201/",
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "U15G 1"
+  },
+  {
+    "id": "u15g-2",
+    "phase": "brassages",
+    "competition": "U15 garçons 2 · Brassages",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u15m-32952/poule-199203/",
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "U15G 2"
+  },
+  {
+    "id": "u11-1",
+    "phase": "delayages",
+    "competition": "U11 mixte 1 · Délayages",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u11-mixtes-32957/poule-194738/",
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "U11 1"
+  },
+  {
+    "id": "u11-1",
+    "phase": "brassages",
+    "competition": "U11 mixte 1 · Brassages",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u11-mixtes-32957/poule-199226/",
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "U11 1"
+  },
+  {
+    "id": "u11-2",
+    "phase": "delayages",
+    "competition": "U11 mixte 2 · Délayages",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u11-mixtes-32957/poule-194739/",
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "U11 2"
+  },
+  {
+    "id": "u11-2",
+    "phase": "brassages",
+    "competition": "U11 mixte 2 · Brassages",
+    "url": "https://www.ffhandball.fr/competitions/saison-2026-2027-22/departemental/u11-mixtes-32957/poule-199230/",
+    "club": "ROMAINVILL",
+    "classement": true,
+    "label": "U11 2"
   }
 ]

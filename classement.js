@@ -12,7 +12,7 @@ nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 const header = document.getElementById('header');
 addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 10), { passive: true });
 
-// Résultats, calendrier et classement de SM1 (data/matches.json et data/standings.json)
+// Résultats, calendrier et classement de SM1 (data/sm1/)
 const REFRESH_MS = 5 * 60 * 1000;
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const isUs = n => /romainvill/i.test(n);
@@ -24,7 +24,7 @@ const row = (m, right, cls) => '<li><span class="date">' + esc(fmtShort(m.d)) + 
 
 async function loadMatches() {
   try {
-    const data = await (await fetch('data/matches.json', { cache: 'no-store' })).json();
+    const data = await (await fetch('data/sm1/matches.json', { cache: 'no-store' })).json();
     const all = data.matches.map(m => ({ ...m, d: new Date(m.date) })).sort((a, b) => a.d - b.d);
     const played = all.filter(m => m.score).reverse();
     const next = all.filter(m => !m.score && m.d.getTime() + 2 * 36e5 > Date.now());
@@ -37,7 +37,7 @@ async function loadMatches() {
 async function loadStandings() {
   const body = document.getElementById('st-body');
   try {
-    const d = await (await fetch('data/standings.json', { cache: 'no-store' })).json();
+    const d = await (await fetch('data/sm1/standings.json', { cache: 'no-store' })).json();
     document.getElementById('cl-comp').textContent = d.competition || '';
     const up = new Date(d.updated);
     if (!isNaN(up)) document.getElementById('st-updated').textContent = 'Mis à jour le ' + up.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' }) + ' à ' + fmtTime(up);

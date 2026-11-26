@@ -32,8 +32,8 @@ function tick() {
 }
 tick(); setInterval(tick, 1000);
 
-// Matchs & résultats : lus depuis data/matches.json (remplaçable par une vraie API)
-const MATCHES_URL = 'data/matches.json'; // ex. '/api/matches' quand un back-end existera
+// Matchs & résultats : lus depuis data/sm1/matches.json (remplaçable par une vraie API)
+const MATCHES_URL = 'data/sm1/matches.json'; // ex. '/api/matches' quand un back-end existera
 const REFRESH_MS = 5 * 60 * 1000;        // actualisation automatique toutes les 5 min
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const isUs = n => /romainvill/i.test(n);
@@ -59,22 +59,7 @@ function resultClass(m) {
 
 function renderMatches(data) {
   const all = data.matches.map(m => ({ ...m, d: new Date(m.date) })).sort((a, b) => a.d - b.d);
-  const played = all.filter(m => m.score).reverse().slice(0, 4);
   const upcoming = all.filter(m => !m.score && m.d.getTime() + 2 * 36e5 > Date.now());
-  const mini = (name, url) => isUs(name)
-    ? '<img class="mini-logo" src="assets/logo.png" alt="">'
-    : url ? '<img class="mini-logo" src="' + esc(url) + '" alt="" loading="lazy">' : '';
-  const li = (m, right, cls) => '<li><span class="date">' + esc(fmtShort(m.d)) + '</span><span class="vsname">' +
-    mini(m.home, m.homeLogo) + esc(m.home) + ' <em>vs</em> ' + mini(m.away, m.awayLogo) + esc(m.away) + '</span><span class="score ' + cls + '">' + right + '</span></li>';
-
-  document.getElementById('resultsList').innerHTML = played.length
-    ? played.map(m => li(m, m.score[0] + ' – ' + m.score[1], resultClass(m))).join('')
-    : '<li>Aucun résultat pour le moment.</li>';
-
-  const nextList = upcoming.slice(1, 5);
-  document.getElementById('upcomingList').innerHTML = nextList.length
-    ? nextList.map(m => li(m, esc(fmtTime(m.d)), 'next')).join('')
-    : '<li>Calendrier à venir.</li>';
 
   const next = upcoming[0];
   if (next) {
@@ -97,6 +82,52 @@ function renderMatches(data) {
   }
 }
 
+// ---- Calendrier de la semaine (tous les collectifs) : data/calendrier.json ----
+// Une seule semaine est affichée. Elle est recalculée à chaque affichage : le lundi matin, la nouvelle semaine apparaît toute seule.
+// Si toutes les rencontres de la semaine en cours sont passées (dimanche soir), on montre la semaine suivante.
+const MONTHS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+const DAY_NAMES = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+const dayNum = d => d.getDate() === 1 ? '1er' : String(d.getDate());
+const mondayOf = d => new Date(d.getFullYear(), d.getMonth(), d.getDate() - ((d.getDay() + 6) % 7));
+function weekLabel(mon) {
+  const sun = new Date(mon.getFullYear(), mon.getMonth(), mon.getDate() + 6);
+  return mon.getMonth() === sun.getMonth()
+    ? 'Semaine du ' + dayNum(mon) + ' au ' + dayNum(sun) + ' ' + MONTHS[mon.getMonth()]
+    : 'Semaine du ' + dayNum(mon) + ' ' + MONTHS[mon.getMonth()] + ' au ' + dayNum(sun) + ' ' + MONTHS[sun.getMonth()];
+}
+async function loadCalendar() {
+  const grid = document.getElementById('calGrid');
+  if (!grid) return;
+  try {
+    const r = await fetch('data/calendrier.json', { cache: 'no-store' });
+    if (!r.ok) throw new Error(r.status);
+    const list = (await r.json()).matches.map(m => ({ ...m, d: new Date(m.date) })).filter(m => m.d.getTime() + 3 * 36e5 > Date.now()).sort((a, b) => a.d - b.d || a.label.localeCompare(b.label));
+    const mini = (name, url) => isUs(name) ? '<img class="mini-logo" src="assets/logo.png" alt="">' : url ? '<img class="mini-logo" src="' + esc(url) + '" alt="" loading="lazy">' : '';
+    const thisMonday = mondayOf(new Date());
+    const inWeek = mon => list.filter(m => mondayOf(m.d).getTime() === mon.getTime());
+    let mon = thisMonday, items = inWeek(mon), next = false;
+    if (!items.length) { // semaine en cours terminée ou vide : on montre la semaine suivante
+      mon = new Date(thisMonday.getFullYear(), thisMonday.getMonth(), thisMonday.getDate() + 7);
+      items = inWeek(mon); next = true;
+    }
+    const tag = next ? '<em class="cal__tag cal__tag--next">Semaine prochaine</em>' : '<em class="cal__tag">Cette semaine</em>';
+    const head = '<div class="cal__week is-current"><h4><span>' + esc(weekLabel(mon)) + tag + '</span><small>' +
+      (items.length ? items.length + ' rencontre' + (items.length > 1 ? 's' : '') + ' · ' + new Set(items.map(m => m.collectif)).size + ' équipe' + (new Set(items.map(m => m.collectif)).size > 1 ? 's' : '') : 'Aucune rencontre') + '</small></h4>';
+    if (!items.length) { grid.innerHTML = head + '<p class="cal__none">Pas de rencontre programmée. Le calendrier se met à jour automatiquement chaque lundi matin.</p></div>'; return; }
+    // regroupement par jour
+    const days = new Map();
+    items.forEach(m => { const k = m.d.getFullYear() + '-' + m.d.getMonth() + '-' + m.d.getDate(); if (!days.has(k)) days.set(k, []); days.get(k).push(m); });
+    const dayBlocks = [...days.values()].map(ms => '<div class="cal__day"><h5>' + DAY_NAMES[ms[0].d.getDay()] + ' <span>' + dayNum(ms[0].d) + ' ' + MONTHS[ms[0].d.getMonth()] + '</span></h5><ul>' +
+      ms.map(m => '<li class="' + (isUs(m.home) ? 'is-home' : '') + '"><span class="cal__when">' + esc(fmtTime(m.d)) + '</span><span class="cal__team">' + esc(m.label) + '</span>' +
+        '<span class="cal__vs">' + mini(m.home, m.homeLogo) + esc(m.home) + ' <em>vs</em> ' + mini(m.away, m.awayLogo) + esc(m.away) + '</span>' +
+        '<span class="cal__where">' + (isUs(m.home) ? 'Domicile' : 'Extérieur') + '</span></li>').join('') + '</ul></div>').join('');
+    grid.innerHTML = head + '<div class="cal__days">' + dayBlocks + '</div></div>';
+  } catch (e) {
+    console.warn('Calendrier indisponible', e);
+    grid.innerHTML = '<p class="cal__empty">Calendrier indisponible pour le moment.</p>';
+  }
+}
+
 async function loadMatches() {
   try {
     const r = await fetch(MATCHES_URL, { cache: 'no-store' });
@@ -107,14 +138,15 @@ async function loadMatches() {
   }
 }
 loadMatches();
-setInterval(loadMatches, REFRESH_MS);
+loadCalendar();
+setInterval(() => { loadMatches(); loadCalendar(); }, REFRESH_MS);
 
-// Classement de l'équipe fanion : lu depuis data/standings.json
+// Classement de l'équipe fanion : lu depuis data/sm1/standings.json
 async function loadStandings() {
   const body = document.getElementById('st-body');
   if (!body) return;
   try {
-    const r = await fetch('data/standings.json', { cache: 'no-store' });
+    const r = await fetch('data/sm1/standings.json', { cache: 'no-store' });
     if (!r.ok) throw new Error(r.status);
     const d = await r.json();
     document.getElementById('st-comp').textContent = d.competition || '';

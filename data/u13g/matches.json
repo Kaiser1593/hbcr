@@ -1,0 +1,82 @@
+{
+  "club": "Romainville",
+  "updated": "2026-11-26T00:01:26.553Z",
+  "source": "ffhandball.fr",
+  "matches": [
+    {
+      "id": "2713082",
+      "date": "2026-09-26T14:30:00",
+      "journee": 1,
+      "competition": "U13 garçons · Délayages",
+      "phase": "delayages",
+      "home": "Romainville",
+      "away": "Lilas-Pre Handball",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2026-10-22-e8cd16e2-979b-49a4-a0d2-3efe3b512975.webp",
+      "score": [
+        34,
+        11
+      ]
+    },
+    {
+      "id": "2713084",
+      "date": "2026-10-04T13:00:00",
+      "journee": 2,
+      "competition": "U13 garçons · Délayages",
+      "phase": "delayages",
+      "home": "Aulnay Handball",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2025-09-03-aeb9cabb-95a0-457e-92f4-92c63c5f4fab.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        25,
+        22
+      ]
+    },
+    {
+      "id": "2713085",
+      "date": "2026-10-10T16:30:00",
+      "journee": 3,
+      "competition": "U13 garçons · Délayages",
+      "phase": "delayages",
+      "home": "Handball Club de Livry-Gargan",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2021-02-09-31643b37-e44b-4e16-8470-ab0375071c86.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        50,
+        10
+      ]
+    },
+    {
+      "id": "2752812",
+      "date": "2026-11-14T16:30:00",
+      "journee": 2,
+      "competition": "U13 garçons · Brassages",
+      "phase": "brassages",
+      "home": "Handball Club de Drancy 1B",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2026-09-23-e8175ea8-c95d-47de-8182-04a39ebaf197.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        3,
+        11
+      ]
+    },
+    {
+      "id": "2752814",
+      "date": "2026-11-21T15:00:00",
+      "journee": 3,
+      "competition": "U13 garçons · Brassages",
+      "phase": "brassages",
+      "home": "Stade Olympique Rosny-Sous-Bois 1B",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2016-07-06-57c02f9c-720c-4a1d-b5f2-4167fadc9298.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        21,
+        11
+      ]
+    }
+  ]
+}

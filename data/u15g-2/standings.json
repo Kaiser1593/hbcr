@@ -1,0 +1,62 @@
+{
+  "updated": "2026-11-26T00:01:53.466Z",
+  "phases": [
+    {
+      "phase": "brassages",
+      "competition": "U15 garçons 2 · Brassages",
+      "table": [
+        {
+          "rank": 1,
+          "team": "Tremblay-En-France Handball 1B",
+          "logo": "assets/clubs/2021-07-26-3f4be8be-e1f1-4361-aa5d-998a32526326.webp",
+          "points": 6,
+          "played": 2,
+          "won": 2,
+          "drawn": 0,
+          "lost": 0,
+          "for": 90,
+          "against": 42,
+          "diff": 48,
+          "form": [
+            1,
+            1
+          ]
+        },
+        {
+          "rank": 2,
+          "team": "Romainville",
+          "logo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+          "points": 4,
+          "played": 2,
+          "won": 1,
+          "drawn": 0,
+          "lost": 1,
+          "for": 46,
+          "against": 75,
+          "diff": -29,
+          "form": [
+            1,
+            -1
+          ]
+        },
+        {
+          "rank": 3,
+          "team": "Lilas-Pre Handball",
+          "logo": "assets/clubs/2026-10-22-e8cd16e2-979b-49a4-a0d2-3efe3b512975.webp",
+          "points": 2,
+          "played": 2,
+          "won": 0,
+          "drawn": 0,
+          "lost": 2,
+          "for": 50,
+          "against": 69,
+          "diff": -19,
+          "form": [
+            -1,
+            -1
+          ]
+        }
+      ]
+    }
+  ]
+}

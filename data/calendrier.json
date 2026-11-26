@@ -1,0 +1,95 @@
+{
+  "updated": "2026-11-26T00:02:01.777Z",
+  "matches": [
+    {
+      "collectif": "sm1",
+      "label": "SM1",
+      "date": "2026-11-28T18:00:00",
+      "competition": "+16M 1ère Division Territoriale",
+      "home": "Romainville",
+      "away": "Athletic Club de Bobigny",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2021-02-09-4e38ac58-98c0-4bdf-964e-055ec7435159.webp"
+    },
+    {
+      "collectif": "u18f",
+      "label": "U18F",
+      "date": "2026-11-29T14:00:00",
+      "competition": "U18 filles · Phase de poules",
+      "home": "Noisy-Le-Grand Handball",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2021-02-09-e7634555-ed5c-4d28-871e-3b3deaa64928.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp"
+    },
+    {
+      "collectif": "sf1",
+      "label": "SF1",
+      "date": "2026-11-29T16:00:00",
+      "competition": "+16F 1ère Division Territoriale",
+      "home": "Romainville",
+      "away": "Villepinte Handball Club",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2026-07-16-daf470ab-c150-4c21-8135-e03ed9096337.webp"
+    },
+    {
+      "collectif": "sf1",
+      "label": "SF1",
+      "date": "2026-12-05T20:30:00",
+      "competition": "+16F 1ère Division Territoriale",
+      "home": "Noisy-Le-Grand Handball 1D",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2021-02-09-e7634555-ed5c-4d28-871e-3b3deaa64928.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp"
+    },
+    {
+      "collectif": "u18f",
+      "label": "U18F",
+      "date": "2026-12-06T12:00:00",
+      "competition": "U18 filles · Phase de poules",
+      "home": "Villemomble Handball",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2023-08-30-af255a31-2107-41d0-b2f7-4718619043b5.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp"
+    },
+    {
+      "collectif": "sm1",
+      "label": "SM1",
+      "date": "2026-12-06T14:00:00",
+      "competition": "+16M 1ère Division Territoriale",
+      "home": "Villemomble Handball 1C",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2023-08-30-af255a31-2107-41d0-b2f7-4718619043b5.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp"
+    },
+    {
+      "collectif": "sm1",
+      "label": "SM1",
+      "date": "2026-12-13T12:00:00",
+      "competition": "+16M 1ère Division Territoriale",
+      "home": "Romainville",
+      "away": "Handball Club de Gagny 1B",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2025-09-26-ecb753ef-ac66-459a-849b-b5caaa00e5d8.webp"
+    },
+    {
+      "collectif": "u18f",
+      "label": "U18F",
+      "date": "2026-12-13T14:00:00",
+      "competition": "U18 filles · Phase de poules",
+      "home": "Romainville",
+      "away": "Montreuil Handball",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2021-11-26-c0c6a59c-1cfb-4f76-92a8-60b8d7089d81.webp"
+    },
+    {
+      "collectif": "sf1",
+      "label": "SF1",
+      "date": "2026-12-13T16:00:00",
+      "competition": "+16F 1ère Division Territoriale",
+      "home": "Romainville",
+      "away": "Usma Saint-Ouen",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2015-07-11-08c6ec99-bd15-4e7c-a838-00ade1772bef.webp"
+    }
+  ]
+}

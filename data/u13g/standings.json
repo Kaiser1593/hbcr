@@ -1,0 +1,140 @@
+{
+  "updated": "2026-11-26T00:01:28.611Z",
+  "phases": [
+    {
+      "phase": "delayages",
+      "competition": "U13 garçons · Délayages",
+      "table": [
+        {
+          "rank": 1,
+          "team": "Handball Club de Livry-Gargan",
+          "logo": "assets/clubs/2021-02-09-31643b37-e44b-4e16-8470-ab0375071c86.webp",
+          "points": 9,
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "for": 153,
+          "against": 27,
+          "diff": 126,
+          "form": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "rank": 2,
+          "team": "Aulnay Handball",
+          "logo": "assets/clubs/2025-09-03-aeb9cabb-95a0-457e-92f4-92c63c5f4fab.webp",
+          "points": 7,
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "for": 61,
+          "against": 90,
+          "diff": -29,
+          "form": [
+            -1,
+            1,
+            1
+          ]
+        },
+        {
+          "rank": 3,
+          "team": "Romainville",
+          "logo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+          "points": 5,
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "for": 66,
+          "against": 86,
+          "diff": -20,
+          "form": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        {
+          "rank": 4,
+          "team": "Lilas-Pre Handball",
+          "logo": "assets/clubs/2026-10-22-e8cd16e2-979b-49a4-a0d2-3efe3b512975.webp",
+          "points": 3,
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "for": 29,
+          "against": 106,
+          "diff": -77,
+          "form": [
+            -1,
+            -1,
+            -1
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "brassages",
+      "competition": "U13 garçons · Brassages",
+      "table": [
+        {
+          "rank": 1,
+          "team": "Stade Olympique Rosny-Sous-Bois 1B",
+          "logo": "assets/clubs/2016-07-06-57c02f9c-720c-4a1d-b5f2-4167fadc9298.webp",
+          "points": 6,
+          "played": 2,
+          "won": 2,
+          "drawn": 0,
+          "lost": 0,
+          "for": 44,
+          "against": 11,
+          "diff": 33,
+          "form": [
+            1,
+            1
+          ]
+        },
+        {
+          "rank": 2,
+          "team": "Romainville",
+          "logo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+          "points": 4,
+          "played": 2,
+          "won": 1,
+          "drawn": 0,
+          "lost": 1,
+          "for": 22,
+          "against": 24,
+          "diff": -2,
+          "form": [
+            1,
+            -1
+          ]
+        },
+        {
+          "rank": 3,
+          "team": "Handball Club de Drancy 1B",
+          "logo": "assets/clubs/2026-09-23-e8175ea8-c95d-47de-8182-04a39ebaf197.webp",
+          "points": 2,
+          "played": 2,
+          "won": 0,
+          "drawn": 0,
+          "lost": 2,
+          "for": 3,
+          "against": 34,
+          "diff": -31,
+          "form": [
+            -1,
+            -1
+          ]
+        }
+      ]
+    }
+  ]
+}

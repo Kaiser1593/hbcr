@@ -1,0 +1,82 @@
+{
+  "club": "Romainville",
+  "updated": "2026-11-26T00:01:59.722Z",
+  "source": "ffhandball.fr",
+  "matches": [
+    {
+      "id": "2713064",
+      "date": "2026-09-26T14:45:00",
+      "journee": 1,
+      "competition": "U11 mixte 2 · Délayages",
+      "phase": "delayages",
+      "home": "Saint-Denis Handball",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2022-09-03-b49f9e57-a8ed-4c0a-bf8a-6839e1efe310.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        15,
+        33
+      ]
+    },
+    {
+      "id": "2713065",
+      "date": "2026-10-03T14:00:00",
+      "journee": 2,
+      "competition": "U11 mixte 2 · Délayages",
+      "phase": "delayages",
+      "home": "Romainville",
+      "away": "Tremblay-En-France Handball",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2021-07-26-3f4be8be-e1f1-4361-aa5d-998a32526326.webp",
+      "score": [
+        22,
+        25
+      ]
+    },
+    {
+      "id": "2751139",
+      "date": "2026-11-07T14:15:00",
+      "journee": 1,
+      "competition": "U11 mixte 2 · Brassages",
+      "phase": "brassages",
+      "home": "Romainville",
+      "away": "Athletic Club de Bobigny",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2021-02-09-4e38ac58-98c0-4bdf-964e-055ec7435159.webp",
+      "score": [
+        22,
+        21
+      ]
+    },
+    {
+      "id": "2751142",
+      "date": "2026-11-15T11:15:00",
+      "journee": 2,
+      "competition": "U11 mixte 2 · Brassages",
+      "phase": "brassages",
+      "home": "Villepinte Handball Club 1B",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2026-07-16-daf470ab-c150-4c21-8135-e03ed9096337.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        5,
+        12
+      ]
+    },
+    {
+      "id": "2751143",
+      "date": "2026-11-22T11:00:00",
+      "journee": 3,
+      "competition": "U11 mixte 2 · Brassages",
+      "phase": "brassages",
+      "home": "Romainville",
+      "away": "Lilas-Pre Handball",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2026-10-22-e8cd16e2-979b-49a4-a0d2-3efe3b512975.webp",
+      "score": [
+        5,
+        15
+      ]
+    }
+  ]
+}

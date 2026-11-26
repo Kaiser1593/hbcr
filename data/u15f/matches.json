@@ -1,0 +1,67 @@
+{
+  "club": "Romainville",
+  "updated": "2026-11-26T00:01:44.133Z",
+  "source": "ffhandball.fr",
+  "matches": [
+    {
+      "id": "2729518",
+      "date": "2026-09-26T16:15:00",
+      "journee": 1,
+      "competition": "U15 filles · Délayages",
+      "phase": "delayages",
+      "home": "Saint-Denis Handball",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2022-09-03-b49f9e57-a8ed-4c0a-bf8a-6839e1efe310.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        35,
+        14
+      ]
+    },
+    {
+      "id": "2729519",
+      "date": "2026-10-03T16:00:00",
+      "journee": 2,
+      "competition": "U15 filles · Délayages",
+      "phase": "delayages",
+      "home": "Romainville",
+      "away": "Handball Club de Gagny 1B",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2025-09-26-ecb753ef-ac66-459a-849b-b5caaa00e5d8.webp",
+      "score": [
+        8,
+        40
+      ]
+    },
+    {
+      "id": "2751225",
+      "date": "2026-11-15T12:30:00",
+      "journee": 2,
+      "competition": "U15 filles · Brassages",
+      "phase": "brassages",
+      "home": "Villepinte Handball Club",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2026-07-16-daf470ab-c150-4c21-8135-e03ed9096337.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        43,
+        16
+      ]
+    },
+    {
+      "id": "2751227",
+      "date": "2026-11-22T12:00:00",
+      "journee": 3,
+      "competition": "U15 filles · Brassages",
+      "phase": "brassages",
+      "home": "Handball Club de Livry-Gargan",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2021-02-09-31643b37-e44b-4e16-8470-ab0375071c86.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        29,
+        18
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "updated": "2026-11-26T00:01:50.353Z",
+  "phases": [
+    {
+      "phase": "delayages",
+      "competition": "U15 garçons 1 · Délayages",
+      "table": [
+        {
+          "rank": 1,
+          "team": "Romainville",
+          "logo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+          "points": 6,
+          "played": 2,
+          "won": 2,
+          "drawn": 0,
+          "lost": 0,
+          "for": 69,
+          "against": 52,
+          "diff": 17,
+          "form": [
+            1,
+            1
+          ]
+        },
+        {
+          "rank": 2,
+          "team": "Villemomble Handball",
+          "logo": "assets/clubs/2023-08-30-af255a31-2107-41d0-b2f7-4718619043b5.webp",
+          "points": 4,
+          "played": 2,
+          "won": 1,
+          "drawn": 0,
+          "lost": 1,
+          "for": 60,
+          "against": 62,
+          "diff": -2,
+          "form": [
+            -1,
+            1
+          ]
+        },
+        {
+          "rank": 3,
+          "team": "Etoile Sportive de Sevran",
+          "logo": "assets/clubs/2015-07-24-1caf2a4f-6469-49b1-9f86-67d1346776bf.webp",
+          "points": 2,
+          "played": 2,
+          "won": 0,
+          "drawn": 0,
+          "lost": 2,
+          "for": 50,
+          "against": 65,
+          "diff": -15,
+          "form": [
+            -1,
+            -1
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "brassages",
+      "competition": "U15 garçons 1 · Brassages",
+      "table": [
+        {
+          "rank": 1,
+          "team": "Villemomble Handball",
+          "logo": "assets/clubs/2023-08-30-af255a31-2107-41d0-b2f7-4718619043b5.webp",
+          "points": 7,
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "for": 92,
+          "against": 83,
+          "diff": 9,
+          "form": [
+            1,
+            1,
+            -1
+          ]
+        },
+        {
+          "rank": 2,
+          "team": "Romainville",
+          "logo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+          "points": 7,
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "for": 121,
+          "against": 61,
+          "diff": 60,
+          "form": [
+            -1,
+            1,
+            1
+          ]
+        },
+        {
+          "rank": 3,
+          "team": "Etoile Sportive de Sevran",
+          "logo": "assets/clubs/2015-07-24-1caf2a4f-6469-49b1-9f86-67d1346776bf.webp",
+          "points": 5,
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "for": 60,
+          "against": 108,
+          "diff": -48,
+          "form": [
+            1,
+            -1,
+            -1
+          ]
+        },
+        {
+          "rank": 4,
+          "team": "Montreuil Handball 1B",
+          "logo": "assets/clubs/2021-11-26-c0c6a59c-1cfb-4f76-92a8-60b8d7089d81.webp",
+          "points": 5,
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "for": 66,
+          "against": 87,
+          "diff": -21,
+          "form": [
+            -1,
+            -1,
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}

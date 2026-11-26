@@ -1,0 +1,138 @@
+{
+  "club": "Romainville",
+  "updated": "2026-11-26T00:01:31.726Z",
+  "source": "ffhandball.fr",
+  "matches": [
+    {
+      "id": "2685003",
+      "date": "2026-09-13T13:00:00",
+      "journee": 1,
+      "competition": "+16F 1ère Division Territoriale",
+      "home": "Villepinte Handball Club",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2026-07-16-daf470ab-c150-4c21-8135-e03ed9096337.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        30,
+        18
+      ]
+    },
+    {
+      "id": "2685007",
+      "date": "2026-09-20T16:00:00",
+      "journee": 2,
+      "competition": "+16F 1ère Division Territoriale",
+      "home": "Romainville",
+      "away": "Noisy-Le-Grand Handball 1D",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2021-02-09-e7634555-ed5c-4d28-871e-3b3deaa64928.webp",
+      "score": [
+        26,
+        24
+      ]
+    },
+    {
+      "id": "2685010",
+      "date": "2026-09-27T14:00:00",
+      "journee": 3,
+      "competition": "+16F 1ère Division Territoriale",
+      "home": "Usma Saint-Ouen",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2015-07-11-08c6ec99-bd15-4e7c-a838-00ade1772bef.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        21,
+        24
+      ]
+    },
+    {
+      "id": "2685013",
+      "date": "2026-10-03T18:00:00",
+      "journee": 4,
+      "competition": "+16F 1ère Division Territoriale",
+      "home": "Romainville",
+      "away": "Lilas-Pre Handball",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2026-10-22-e8cd16e2-979b-49a4-a0d2-3efe3b512975.webp",
+      "score": [
+        25,
+        27
+      ]
+    },
+    {
+      "id": "2685016",
+      "date": "2026-10-11T12:00:00",
+      "journee": 5,
+      "competition": "+16F 1ère Division Territoriale",
+      "home": "Athletic Club de Bobigny 1B",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2021-02-09-4e38ac58-98c0-4bdf-964e-055ec7435159.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        26,
+        24
+      ]
+    },
+    {
+      "id": "2685021",
+      "date": "2026-11-08T16:00:00",
+      "journee": 6,
+      "competition": "+16F 1ère Division Territoriale",
+      "home": "Ent Bondy / Blanc-Mesnil 1B",
+      "away": "Romainville",
+      "homeLogo": null,
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        31,
+        17
+      ]
+    },
+    {
+      "id": "2685026",
+      "date": "2026-11-14T18:00:00",
+      "journee": 7,
+      "competition": "+16F 1ère Division Territoriale",
+      "home": "Romainville",
+      "away": "Pantin/Noisy-Le-Sec +16F",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": null,
+      "score": [
+        30,
+        28
+      ]
+    },
+    {
+      "id": "2685031",
+      "date": "2026-11-29T16:00:00",
+      "journee": 8,
+      "competition": "+16F 1ère Division Territoriale",
+      "home": "Romainville",
+      "away": "Villepinte Handball Club",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2026-07-16-daf470ab-c150-4c21-8135-e03ed9096337.webp",
+      "score": null
+    },
+    {
+      "id": "2685035",
+      "date": "2026-12-05T20:30:00",
+      "journee": 9,
+      "competition": "+16F 1ère Division Territoriale",
+      "home": "Noisy-Le-Grand Handball 1D",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2021-02-09-e7634555-ed5c-4d28-871e-3b3deaa64928.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": null
+    },
+    {
+      "id": "2685038",
+      "date": "2026-12-13T16:00:00",
+      "journee": 10,
+      "competition": "+16F 1ère Division Territoriale",
+      "home": "Romainville",
+      "away": "Usma Saint-Ouen",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2015-07-11-08c6ec99-bd15-4e7c-a838-00ade1772bef.webp",
+      "score": null
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "club": "Romainville",
+  "updated": "2026-11-26T00:01:39.993Z",
+  "source": "ffhandball.fr",
+  "matches": [
+    {
+      "id": "2741422",
+      "date": "2026-10-11T14:30:00",
+      "journee": 1,
+      "competition": "U18 filles · Phase de poules",
+      "home": "Romainville",
+      "away": "Villemomble Handball",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2023-08-30-af255a31-2107-41d0-b2f7-4718619043b5.webp",
+      "score": [
+        32,
+        31
+      ]
+    },
+    {
+      "id": "2741423",
+      "date": "2026-11-07T17:00:00",
+      "journee": 2,
+      "competition": "U18 filles · Phase de poules",
+      "home": "Montreuil Handball",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2021-11-26-c0c6a59c-1cfb-4f76-92a8-60b8d7089d81.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": [
+        18,
+        48
+      ]
+    },
+    {
+      "id": "2741428",
+      "date": "2026-11-15T13:30:00",
+      "journee": 3,
+      "competition": "U18 filles · Phase de poules",
+      "home": "Romainville",
+      "away": "Entente Pantin/Noisy-Le-Sec",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": null,
+      "score": [
+        51,
+        22
+      ]
+    },
+    {
+      "id": "2741429",
+      "date": "2026-11-22T14:00:00",
+      "journee": 4,
+      "competition": "U18 filles · Phase de poules",
+      "home": "Romainville",
+      "away": "Athletic Club de Bobigny",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2021-02-09-4e38ac58-98c0-4bdf-964e-055ec7435159.webp",
+      "score": [
+        31,
+        18
+      ]
+    },
+    {
+      "id": "2741433",
+      "date": "2026-11-29T14:00:00",
+      "journee": 5,
+      "competition": "U18 filles · Phase de poules",
+      "home": "Noisy-Le-Grand Handball",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2021-02-09-e7634555-ed5c-4d28-871e-3b3deaa64928.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": null
+    },
+    {
+      "id": "2741437",
+      "date": "2026-12-06T12:00:00",
+      "journee": 6,
+      "competition": "U18 filles · Phase de poules",
+      "home": "Villemomble Handball",
+      "away": "Romainville",
+      "homeLogo": "assets/clubs/2023-08-30-af255a31-2107-41d0-b2f7-4718619043b5.webp",
+      "awayLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "score": null
+    },
+    {
+      "id": "2741438",
+      "date": "2026-12-13T14:00:00",
+      "journee": 7,
+      "competition": "U18 filles · Phase de poules",
+      "home": "Romainville",
+      "away": "Montreuil Handball",
+      "homeLogo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "awayLogo": "assets/clubs/2021-11-26-c0c6a59c-1cfb-4f76-92a8-60b8d7089d81.webp",
+      "score": null
+    }
+  ]
+}

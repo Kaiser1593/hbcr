@@ -1,8 +1,7 @@
 // Met à jour les données de matchs et de classement depuis les pages publiques « poule » de ffhandball.fr.
 // Usage : node scripts/update-matches.mjs      (FULL=1 pour relire toutes les journées)
 // Les poules à suivre sont listées dans scripts/sources.json. Chaque entrée appartient à un collectif ("id").
-//   - collectif "sm1" (par défaut) : data/matches.json et data/standings.json
-//   - autres collectifs            : data/<id>/matches.json et data/<id>/standings.json
+//   - chaque collectif a son dossier : data/<id>/matches.json et data/<id>/standings.json (sm1, sf1, u13f, u13g…)
 import { readFile, writeFile, mkdir, access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
@@ -39,9 +38,9 @@ function extractArray(text, key) {
 
 const pretty = name => {
   if (/romainvill/i.test(name)) return 'Romainville';
-  return name.toLowerCase().replace(/(^|[\s'-])(\p{L})/gu, (_, a, b) => a + b.toUpperCase())
+  return name.toLowerCase().replace(/(^|[\s'/-])(\p{L})/gu, (_, a, b) => a + b.toUpperCase())
     .replace(/(?<=\s)(De|Du|Des|La|Le|Sous|En|Sur)(?=\s)/g, m => m.toLowerCase())
-    .replace(/\b(1[a-c])\b/gi, m => m.toUpperCase());
+    .replace(/\b(\d+[a-z])\b/gi, m => m.toUpperCase());
 };
 
 // Score numérique, ou null si le match n'a pas eu lieu. « FO » = forfait de l'équipe concernée (0 but).
@@ -72,8 +71,8 @@ async function logo(file, show) {
 
 // ---- un collectif = un groupe de poules ----
 async function syncGroup(id, group) {
-  const dir = id === 'sm1' ? '' : `${id}/`;
-  if (dir) await mkdir(new URL(`data/${dir}`, root), { recursive: true });
+  const dir = `${id}/`;
+  await mkdir(new URL(`data/${dir}`, root), { recursive: true });
   const OUT = new URL(`data/${dir}matches.json`, root);
   const STANDINGS_OUT = new URL(`data/${dir}standings.json`, root);
 
@@ -112,6 +111,7 @@ async function syncGroup(id, group) {
           date: r.date.slice(0, 19),
           journee: Number(r.journeeNumero),
           competition: src.competition,
+          ...(src.phase ? { phase: src.phase } : {}),
           home: pretty(r.equipe1Libelle),
           away: pretty(r.equipe2Libelle),
           homeLogo: await logo(r.structure1Logo, r.equipe1ShowLogo),
@@ -128,9 +128,11 @@ async function syncGroup(id, group) {
   await writeFile(OUT, JSON.stringify({ club: 'Romainville', updated: new Date().toISOString(), source: 'ffhandball.fr', matches }, null, 2) + '\n');
   console.log(`[${id}] ${matches.length} matchs écrits dans ${fileURLToPath(OUT)} (${skipped} journées déjà jouées non relues)`);
 
-  // ---- Classement (source du groupe marquée "classement": true) ----
-  const main = group.find(s => s.classement);
-  if (main) {
+  // ---- Classements : une table par source marquée "classement": true ----
+  // Si les sources portent une "phase" (délayages, brassages, championnat), le fichier contient une liste « phases ».
+  const withTable = group.filter(s => s.classement);
+  const tables = [];
+  for (const main of withTable) {
     try {
       await sleep(1000);
       const base = main.url.replace(/\/?$/, '/');
@@ -149,11 +151,18 @@ async function syncGroup(id, group) {
         });
       }
       table.sort((a, b) => a.rank - b.rank);
-      await writeFile(STANDINGS_OUT, JSON.stringify({ competition: main.competition, updated: new Date().toISOString(), table }, null, 2) + '\n');
-      console.log(`[${id}] Classement : ${table.length} équipes écrites`);
+      tables.push({ phase: main.phase, competition: main.competition, table });
     } catch (err) {
-      console.warn(`[${id}] Classement non mis à jour :`, err.message);
+      console.warn(`[${id}] Classement non mis à jour (${main.competition}) :`, err.message);
     }
+  }
+  if (tables.length) {
+    const updated = new Date().toISOString();
+    const body = group.some(s => s.phase)
+      ? { updated, phases: tables }
+      : { competition: tables[0].competition, updated, table: tables[0].table };
+    await writeFile(STANDINGS_OUT, JSON.stringify(body, null, 2) + '\n');
+    console.log(`[${id}] Classement(s) : ${tables.length} table(s) écrite(s)`);
   }
 }
 
@@ -168,4 +177,23 @@ for (const [id, group] of groups) {
   try { await syncGroup(id, group); }
   catch (err) { failed = true; console.error(`[${id}] ERREUR :`, err.message); } // un collectif en échec ne bloque pas les autres
 }
+// ---- Calendrier des prochaines rencontres de tous les collectifs : data/calendrier.json ----
+try {
+  const labels = new Map(sources.map(x => [x.id || 'sm1', x.label || (x.id || 'sm1').toUpperCase()]));
+  const upcoming = [];
+  for (const [id, label] of labels) {
+    try {
+      const m = JSON.parse(await readFile(new URL(`data/${id}/matches.json`, root), 'utf8')).matches ?? [];
+      for (const x of m) {
+        if (x.score) continue;
+        if (new Date(x.date).getTime() < Date.now() - 3 * 36e5) continue; // déjà passé
+        upcoming.push({ collectif: id, label, date: x.date, competition: x.competition, home: x.home, away: x.away, homeLogo: x.homeLogo ?? null, awayLogo: x.awayLogo ?? null });
+      }
+    } catch { /* collectif sans données : ignoré */ }
+  }
+  upcoming.sort((a, b) => a.date.localeCompare(b.date) || a.label.localeCompare(b.label));
+  await writeFile(new URL('data/calendrier.json', root), JSON.stringify({ updated: new Date().toISOString(), matches: upcoming }, null, 2) + '\n');
+  console.log(`Calendrier : ${upcoming.length} rencontres à venir`);
+} catch (err) { console.warn('Calendrier non généré :', err.message); }
+
 if (failed) process.exitCode = 1;

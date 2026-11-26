@@ -1,0 +1,142 @@
+{
+  "updated": "2026-11-26T00:02:01.770Z",
+  "phases": [
+    {
+      "phase": "delayages",
+      "competition": "U11 mixte 2 · Délayages",
+      "table": [
+        {
+          "rank": 1,
+          "team": "Tremblay-En-France Handball",
+          "logo": "assets/clubs/2021-07-26-3f4be8be-e1f1-4361-aa5d-998a32526326.webp",
+          "points": 6,
+          "played": 2,
+          "won": 2,
+          "drawn": 0,
+          "lost": 0,
+          "for": 42,
+          "against": 29,
+          "diff": 13,
+          "form": [
+            1,
+            1
+          ]
+        },
+        {
+          "rank": 2,
+          "team": "Romainville",
+          "logo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+          "points": 4,
+          "played": 2,
+          "won": 1,
+          "drawn": 0,
+          "lost": 1,
+          "for": 55,
+          "against": 40,
+          "diff": 15,
+          "form": [
+            1,
+            -1
+          ]
+        },
+        {
+          "rank": 3,
+          "team": "Saint-Denis Handball",
+          "logo": "assets/clubs/2022-09-03-b49f9e57-a8ed-4c0a-bf8a-6839e1efe310.webp",
+          "points": 2,
+          "played": 2,
+          "won": 0,
+          "drawn": 0,
+          "lost": 2,
+          "for": 22,
+          "against": 50,
+          "diff": -28,
+          "form": [
+            -1,
+            -1
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "brassages",
+      "competition": "U11 mixte 2 · Brassages",
+      "table": [
+        {
+          "rank": 1,
+          "team": "Romainville",
+          "logo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+          "points": 7,
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "for": 39,
+          "against": 41,
+          "diff": -2,
+          "form": [
+            1,
+            1,
+            -1
+          ]
+        },
+        {
+          "rank": 2,
+          "team": "Lilas-Pre Handball",
+          "logo": "assets/clubs/2026-10-22-e8cd16e2-979b-49a4-a0d2-3efe3b512975.webp",
+          "points": 6,
+          "played": 2,
+          "won": 2,
+          "drawn": 0,
+          "lost": 0,
+          "for": 29,
+          "against": 16,
+          "diff": 13,
+          "form": [
+            -1,
+            -1,
+            1,
+            1
+          ]
+        },
+        {
+          "rank": 3,
+          "team": "Athletic Club de Bobigny",
+          "logo": "assets/clubs/2021-02-09-4e38ac58-98c0-4bdf-964e-055ec7435159.webp",
+          "points": 5,
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "for": 59,
+          "against": 50,
+          "diff": 9,
+          "form": [
+            -1,
+            -1,
+            1
+          ]
+        },
+        {
+          "rank": 4,
+          "team": "Villepinte Handball Club 1B",
+          "logo": "assets/clubs/2026-07-16-daf470ab-c150-4c21-8135-e03ed9096337.webp",
+          "points": 2,
+          "played": 2,
+          "won": 0,
+          "drawn": 0,
+          "lost": 2,
+          "for": 19,
+          "against": 39,
+          "diff": -20,
+          "form": [
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        }
+      ]
+    }
+  ]
+}

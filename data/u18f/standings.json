@@ -1,0 +1,125 @@
+{
+  "competition": "U18 filles · Phase de poules",
+  "updated": "2026-11-26T00:01:41.015Z",
+  "table": [
+    {
+      "rank": 1,
+      "team": "Noisy-Le-Grand Handball",
+      "logo": "assets/clubs/2021-02-09-e7634555-ed5c-4d28-871e-3b3deaa64928.webp",
+      "points": 12,
+      "played": 4,
+      "won": 4,
+      "drawn": 0,
+      "lost": 0,
+      "for": 163,
+      "against": 81,
+      "diff": 82,
+      "form": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "rank": 2,
+      "team": "Romainville",
+      "logo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+      "points": 12,
+      "played": 4,
+      "won": 4,
+      "drawn": 0,
+      "lost": 0,
+      "for": 162,
+      "against": 89,
+      "diff": 73,
+      "form": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "rank": 3,
+      "team": "Villemomble Handball",
+      "logo": "assets/clubs/2023-08-30-af255a31-2107-41d0-b2f7-4718619043b5.webp",
+      "points": 8,
+      "played": 4,
+      "won": 2,
+      "drawn": 0,
+      "lost": 2,
+      "for": 150,
+      "against": 117,
+      "diff": 33,
+      "form": [
+        -1,
+        1,
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "rank": 4,
+      "team": "Athletic Club de Bobigny",
+      "logo": "assets/clubs/2021-02-09-4e38ac58-98c0-4bdf-964e-055ec7435159.webp",
+      "points": 6,
+      "played": 4,
+      "won": 1,
+      "drawn": 0,
+      "lost": 3,
+      "for": 87,
+      "against": 134,
+      "diff": -47,
+      "form": [
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "rank": 5,
+      "team": "Montreuil Handball",
+      "logo": "assets/clubs/2021-11-26-c0c6a59c-1cfb-4f76-92a8-60b8d7089d81.webp",
+      "points": 5,
+      "played": 4,
+      "won": 0,
+      "drawn": 1,
+      "lost": 3,
+      "for": 88,
+      "against": 150,
+      "diff": -62,
+      "form": [
+        0,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "rank": 6,
+      "team": "Entente Pantin/Noisy-Le-Sec",
+      "logo": null,
+      "points": 5,
+      "played": 4,
+      "won": 0,
+      "drawn": 1,
+      "lost": 3,
+      "for": 91,
+      "against": 170,
+      "diff": -79,
+      "form": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

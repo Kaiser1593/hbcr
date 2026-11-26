@@ -1,0 +1,121 @@
+{
+  "updated": "2026-11-26T00:01:46.201Z",
+  "phases": [
+    {
+      "phase": "delayages",
+      "competition": "U15 filles · Délayages",
+      "table": [
+        {
+          "rank": 1,
+          "team": "Saint-Denis Handball",
+          "logo": "assets/clubs/2022-09-03-b49f9e57-a8ed-4c0a-bf8a-6839e1efe310.webp",
+          "points": 6,
+          "played": 2,
+          "won": 2,
+          "drawn": 0,
+          "lost": 0,
+          "for": 62,
+          "against": 30,
+          "diff": 32,
+          "form": [
+            1,
+            1
+          ]
+        },
+        {
+          "rank": 2,
+          "team": "Handball Club de Gagny 1B",
+          "logo": "assets/clubs/2025-09-26-ecb753ef-ac66-459a-849b-b5caaa00e5d8.webp",
+          "points": 4,
+          "played": 2,
+          "won": 1,
+          "drawn": 0,
+          "lost": 1,
+          "for": 56,
+          "against": 35,
+          "diff": 21,
+          "form": [
+            1,
+            -1
+          ]
+        },
+        {
+          "rank": 3,
+          "team": "Romainville",
+          "logo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+          "points": 2,
+          "played": 2,
+          "won": 0,
+          "drawn": 0,
+          "lost": 2,
+          "for": 22,
+          "against": 75,
+          "diff": -53,
+          "form": [
+            -1,
+            -1
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "brassages",
+      "competition": "U15 filles · Brassages",
+      "table": [
+        {
+          "rank": 1,
+          "team": "Handball Club de Livry-Gargan",
+          "logo": "assets/clubs/2021-02-09-31643b37-e44b-4e16-8470-ab0375071c86.webp",
+          "points": 6,
+          "played": 2,
+          "won": 2,
+          "drawn": 0,
+          "lost": 0,
+          "for": 53,
+          "against": 40,
+          "diff": 13,
+          "form": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "rank": 2,
+          "team": "Villepinte Handball Club",
+          "logo": "assets/clubs/2026-07-16-daf470ab-c150-4c21-8135-e03ed9096337.webp",
+          "points": 4,
+          "played": 2,
+          "won": 1,
+          "drawn": 0,
+          "lost": 1,
+          "for": 65,
+          "against": 40,
+          "diff": 25,
+          "form": [
+            -1,
+            -1,
+            1
+          ]
+        },
+        {
+          "rank": 3,
+          "team": "Romainville",
+          "logo": "assets/clubs/2021-02-09-998285a4-b80f-4c40-87b0-0af2bc8396ac.webp",
+          "points": 2,
+          "played": 2,
+          "won": 0,
+          "drawn": 0,
+          "lost": 2,
+          "for": 34,
+          "against": 72,
+          "diff": -38,
+          "form": [
+            -1,
+            -1
+          ]
+        }
+      ]
+    }
+  ]
+}
