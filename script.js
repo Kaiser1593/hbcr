@@ -67,7 +67,7 @@ function renderMatches(data) {
     document.getElementById('nm-date').textContent = fmtLong(next.d);
     teamBlock(document.getElementById('nm-home'), next.home, next.homeLogo);
     teamBlock(document.getElementById('nm-away'), next.away, next.awayLogo);
-    document.getElementById('nm-venue').textContent = '📍 ' + (next.venue || (isUs(next.home) ? 'Gymnase Jean Guimier' : 'À l\'extérieur'));
+    document.getElementById('nm-venue').textContent = '' + (next.venue || (isUs(next.home) ? 'Gymnase Jean Guimier' : 'À l\'extérieur'));
     const home = isUs(next.home);
     const where = document.getElementById('nm-where');
     where.textContent = home ? 'À domicile' : 'À l\'extérieur';
