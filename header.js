@@ -32,7 +32,7 @@
     <div class="sidepanel__overlay" id="sideOverlay" hidden></div>
     <aside class="sidepanel" id="sidePanel" aria-label="Menu" aria-hidden="true">
       <div class="sidepanel__head">
-        <a href="${esc(brandHref)}" class="sidepanel__brand"><img src="assets/logo.png" alt="HBC Romainville"></a>
+        <a href="${esc(brandHref)}" class="sidepanel__brand"><img src="${esc(header.querySelector('.brand img')?.getAttribute('src') || 'assets/logo.png')}" alt="HBC Romainville"></a>
         <button class="sidepanel__close" id="sideClose" type="button" aria-label="Fermer le menu">&times;</button>
       </div>
       <ul class="sidepanel__list">${items}</ul>
